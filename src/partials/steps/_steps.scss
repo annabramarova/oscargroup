@@ -1,0 +1,230 @@
+.steps {
+}
+.steps .container {
+}
+.steps-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 156%;
+  color: #5147c3;
+  text-align: left;
+
+  margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 40px;
+    text-align: right;
+    margin-bottom: 35px;
+  }
+  @include laptop {
+    font-size: 54px;
+    margin-bottom: 16px;
+  }
+}
+
+.steps-cards-list-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 335px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.steps-cards-list {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @include laptop {
+    gap: 30px;
+  }
+}
+
+/*----------decor----------*/
+
+.steps-card-decor-top-m {
+  position: absolute;
+  z-index: -1;
+  top: 104px;
+  right: 10px;
+  @include tablet {
+    display: none;
+  }
+}
+
+.steps-card-decor-bottom-m {
+  position: absolute;
+  bottom: 284px;
+  left: 10px;
+  z-index: -1;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.steps-card-decor-top-d {
+  position: absolute;
+  display: none;
+  z-index: -1;
+
+  @include tablet {
+    display: block;
+    left: 60px;
+    top: -70px;
+    transform: rotate(20deg);
+  }
+
+  @include laptop {
+    left: 235px;
+    top: -90px;
+    transform: rotate(5deg);
+  }
+}
+
+.steps-card-decor-bottom-d {
+  position: absolute;
+  display: none;
+  z-index: -1;
+
+  @include tablet {
+    display: block;
+    bottom: 20px;
+    right: 116px;
+    transform: rotate(20deg);
+  }
+
+  @include laptop {
+    bottom: 40px;
+    right: 340px;
+    transform: rotate(-2deg);
+  }
+}
+/*---------------------------*/
+
+.steps-card {
+  position: relative;
+  flex: 1;
+  z-index: 2;
+  width: 260px;
+
+  &:nth-child(1) {
+    padding: 0;
+  }
+  &:nth-child(2) {
+    padding: 0;
+    margin-left: auto;
+  }
+
+  &:nth-child(3) {
+    padding: 0;
+  }
+
+  @include tablet {
+    width: auto;
+    &:nth-child(1) {
+      padding: 0;
+    }
+    &:nth-child(2) {
+      padding-top: 90px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 200px;
+    }
+  }
+
+  @include laptop {
+    &:nth-child(1) {
+      padding: 0;
+    }
+    &:nth-child(2) {
+      padding-top: 108px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 265px;
+    }
+  }
+}
+
+.sc-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100px;
+  padding: 32px 24px;
+
+  background-color: #f3e9ff;
+  @include tablet {
+    border-radius: 100px;
+    padding: 35px 15px;
+    height: 338px;
+  }
+  @include laptop {
+    border-radius: 180px;
+    padding: 60px 60px;
+    height: 412px;
+  }
+}
+
+.steps-card-img {
+  width: 60px;
+
+  @include tablet {
+    width: 60px;
+  }
+  @include laptop {
+    width: 80px;
+  }
+}
+.steps-card-title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 135%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #131738;
+  margin-top: 20px;
+
+  @include tablet {
+    font-size: 25px;
+  }
+
+  @include laptop {
+    font-size: 32px;
+    margin-top: 32px;
+  }
+}
+.steps-card-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #343280;
+  margin-top: 12px;
+
+  @include tablet {
+  }
+
+  @include laptop {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}

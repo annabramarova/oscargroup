@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl {
+  margin-block: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+fieldset {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+// svg *[fill] {
+//   fill: currentColor;
+// }
+// svg *[stroke] {
+//   stroke: currentColor;
+// }
+
+// svg * {
+//   transition-property: fill, stroke;
+// }
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  @media (pointer: fine) {
+    cursor: pointer;
+  }
+}
+
+@media (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,55 @@
+.footer {
+  background-image: linear-gradient(28deg, #c2b4f8 0.46%, #343280 96.85%);
+  padding: 40px 0px 50px;
+  border-radius: 0 0 60px 0;
+
+  @include tablet {
+    border-radius: 0 0 0 120px;
+  }
+
+  @include laptop {
+    border-radius: 0 0 0 250px;
+    padding: 60px 0px 70px;
+  }
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer-text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 156%;
+  text-align: right;
+  color: #fdf8ff;
+
+  @include tablet {
+    font-size: 38px;
+  }
+
+  @include laptop {
+    font-size: 54px;
+  }
+}
+.footer-btn {
+  padding: 16px 32px;
+  background-color: #c255fb;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: #fdf8ff;
+  width: 100%;
+
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 30px;
+    width: auto;
+  }
+
+  @include laptop {
+    margin-top: 42px;
+  }
+}

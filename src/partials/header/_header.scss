@@ -1,0 +1,56 @@
+.hero-wrapper {
+  position: relative;
+  background: linear-gradient(30deg, #c2b4f8 0.46%, #343280 96.85%);
+  border-radius: 0;
+  @include tablet {
+    border-radius: 0 0 120px 0;
+  }
+
+  @include laptop {
+    border-radius: 0 0 300px 0;
+  }
+}
+.booth {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font-weight: 500;
+
+  font-size: 32px;
+  color: #fff;
+  background: rgba(194, 180, 248, 0.05);
+  border-radius: 100px 0 0 100px;
+
+  padding: 0 16px;
+
+  @include tablet {
+    font-size: 42px;
+    top: 30px;
+    padding: 12px 30px;
+  }
+
+  @include laptop {
+    font-size: 64px;
+    top: 0;
+    padding: 18px 60px;
+  }
+}
+
+.header {
+  padding: 16px 0;
+
+  @include tablet {
+    padding: 24px 0;
+  }
+}
+.container {
+}
+.header-logo {
+  width: 100px;
+
+  @include tablet {
+    width: 120px;
+  }
+}
+.header-logo-img {
+}
