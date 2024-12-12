@@ -1,11 +1,12 @@
 @import './styles/variables';
 @import './styles/reset';
 @import './styles/global';
+@import './styles/reset';
 
 @import './styles/buttons';
 
 @import './partials/header/header';
+@import './partials/header/mobileMenu/menu';
 
 @import './partials/hero/hero';
-@import './partials/steps/steps';
 @import './partials/footer/footer';
