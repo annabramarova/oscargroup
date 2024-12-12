@@ -47,11 +47,20 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   border: none;
-  border-radius: 20px;
-  opacity: 1;
+  border-radius: 100px;
+  padding: 6px 24px;
+  height: 54px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  background: var(--gold-gradient);
   transition: all var(--timing-function);
+
+  @include tablet {
+    font-size: 20px;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {

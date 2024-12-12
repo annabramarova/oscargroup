@@ -41,10 +41,8 @@
     width: 100%;
     overflow-y: auto;
     scrollbar-width: none;
-    padding-right: 20px;
 
     @include laptop {
-        padding-right: 0;
         overflow-y: visible;
     }
 }

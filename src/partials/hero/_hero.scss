@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('/img/hero.avif');
+  background-image: url('/img/hero/hero.avif');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   min-height: 500px;
 
   @include tablet {
-    background-image: url('/img/hero.avif');
+    background-image: url('/img/hero/hero.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -15,7 +15,71 @@
   }
 
   @include laptop {
-    background-image: url('/img/hero.avif');
+    background-image: url('/img/hero/hero.avif');
     max-height: 894px;
   }
+}
+
+.hero-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+
+  @include tablet {
+    padding-top: 0px;
+    justify-content: center;
+  }
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--white);
+
+  @include tablet {
+    font-size: 48px;
+  }
+  @include laptop {
+    font-size: 64px;
+  }
+}
+
+.hero-features{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+.hero-features-icon{
+  width: 26px;
+  height: 26px;
+}
+
+.hero-btn{
+  width: 100%;
+  max-width: 335px;
+  color: var(--white);
+  
+  @include tablet{
+  width: 290px;
+}
 }
