@@ -13,7 +13,6 @@
   align-items: center;
   border-radius: 60px;
   padding: 12px 24px;
-  backdrop-filter: blur(32px);
   background: rgba(9, 10, 9, 0.5);
 }
 
@@ -37,8 +36,9 @@
 .header-menu-wrapper {
   display: none;
   padding: 38px 20px;
-  position: absolute;
+  position: fixed;
   height: 100vh;
+  width: 100vw;
   top: 0;
   bottom: 0;
   left: 0;
@@ -158,6 +158,7 @@
 .btn-mob{
   margin-left: auto;
   margin-top: 40px;
+  margin-right: 20px;
   
   @include laptop {
     display: none;}
