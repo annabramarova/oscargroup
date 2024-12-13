@@ -104,36 +104,36 @@
     }
 }
 
-.gold-title{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: var(--white);
-}
-
 .gold-percent{
     font-weight: 500;
-    font-size: 64px;
+    font-size: 48px;
     line-height: 1;
     text-align: right;
     color: var(--white);
     
         @include tablet {
             text-align: left;
+            font-size: 64px;
         }
 
 }
 
 .gold-accent{
-    font-size: 40px;
+    font-size: 32px;
+    @include tablet {
+            font-size: 40px;
+        }
 }
 
 .gold-text{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.8);
+
+    @include tablet {
+            font-size: 16px;
+        }
 }
 
 .gold-text-bold{
@@ -167,12 +167,16 @@
 
 .advantage-decor-text{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     color: var(--white);
     margin-top: 6px;
 
     @include tablet {
+        font-size: 16px;
+    }
+
+    @include laptop {
         font-size: 18px;
     }
 }

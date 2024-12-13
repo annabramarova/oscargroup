@@ -87,6 +87,14 @@ h2 {
   }
 }
 
+.small-title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--white);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -102,4 +110,8 @@ h2 {
 
 .hide {
   display: none;
+}
+
+.gradient{
+  background: linear-gradient(71deg, #9a7027 0%, #f1d476 100%);
 }
