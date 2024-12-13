@@ -76,10 +76,7 @@
 
 .hero-btn{
   width: 100%;
-  max-width: 335px;
+  max-width: 290px;
   color: var(--white);
   
-  @include tablet{
-  width: 290px;
-}
 }
