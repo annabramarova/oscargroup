@@ -14,16 +14,6 @@
 }
 
 
-.advantage-title {
-    @include tablet {
-        max-width: 300px;
-    }
-    @include laptop {
-        max-width: 400px;
-    }
-}
-
-
 .advantage-text-wrap {
     display: flex;
     flex-direction: column;
@@ -35,6 +25,8 @@
         gap: 24px;
         margin-top: 0;
     }
+
+   
 }
 
 .advantage-text {
@@ -44,12 +36,12 @@
     color: var(--text-light);
 
     @include tablet {
-        max-width: 420px;
+        width: 420px;
     }
 
     @include laptop {
         font-size: 18px;
-        max-width: 810px;
+        width: 810px;
     }
 }
 
@@ -248,4 +240,73 @@
         font-size: 18px;
         margin-top: 26px;
     }
+}
+
+.advantage-btn{
+    position: relative;
+    gap: 16px;
+    border: 1px solid #f1d476;
+    width: 260px;
+    color: var(--text-color);
+    background-color: transparent;
+    margin-top: 24px;
+    text-align: center;
+    
+        @include tablet {
+            margin-top: 32px;
+        }
+
+}
+
+
+.advantage-btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: -2;
+    background: var(--gold-gradient);
+    transition: opacity var(--timing-function);
+    
+}
+
+.advantage-arrow{
+    position: absolute;
+    right: 84px;
+    z-index: 0;
+}
+
+.advantage-signup-chart{
+    width: 100%;
+    box-shadow: 0 8px 17px 0 rgba(88, 63, 9, 0.06), 0 31px 31px 0 rgba(88, 63, 9, 0.05), 0 70px 42px 0 rgba(88, 63, 9, 0.03), 0 124px 50px 0 rgba(88, 63, 9, 0.01), 0 194px 54px 0 rgba(88, 63, 9, 0);
+
+    @include laptop {
+        width: 820px;
+    }
+}
+
+.advantage-signup-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin-top: 24px;
+
+    @include tablet {
+        margin-top: 64px;
+    }
+
+    @include laptop {
+        flex-direction: row;
+        gap: 64px;
+    }
+}
+
+.advantage-signup-btn-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
