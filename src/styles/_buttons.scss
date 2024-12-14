@@ -68,7 +68,13 @@
     &:hover {
       opacity: 0.9;
       border: 1px solid #f1d476;
+
+      &::before,
+        &::after {
+          top: 0;
+      }
     }
+  }
 
     &::before,
     &::after {
@@ -82,13 +88,8 @@
       z-index: -1;
       transition: top var(--timing-function);
     }
-
-    &:hover::before,
-    &:hover::after {
-      top: 0;
-    }
-  }
 }
+
 .signup-btn {
   position: relative;
   display: inline-flex;
@@ -106,14 +107,16 @@
   overflow: hidden;
   z-index: 1;
   transition: box-shadow var(--timing-function), color var(--timing-function);
+  
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0 8px 17px 0 rgba(88, 63, 9, 0.06), 0 31px 31px 0 rgba(88, 63, 9, 0.05), 0 70px 42px 0 rgba(88, 63, 9, 0.03), 0 124px 50px 0 rgba(88, 63, 9, 0.01), 0 194px 54px 0 rgba(88, 63, 9, 0);
+      color: var(--white);
 
-  &:hover {
-    box-shadow: 0 8px 17px 0 rgba(88, 63, 9, 0.06), 0 31px 31px 0 rgba(88, 63, 9, 0.05), 0 70px 42px 0 rgba(88, 63, 9, 0.03), 0 124px 50px 0 rgba(88, 63, 9, 0.01), 0 194px 54px 0 rgba(88, 63, 9, 0);
-    color: var(--white);
-
-    &::before,
-    &::after {
-      top: 0;
+      &::before,
+      &::after {
+        top: 0;
+      }
     }
   }
 
