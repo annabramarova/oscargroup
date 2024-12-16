@@ -1,0 +1,89 @@
+.steps-title-wrap{
+    text-align: center;
+}
+
+.steps-title{
+    margin-bottom: 20px;
+}
+
+.steps-text{
+    margin-bottom: 24px;
+
+    @include tablet {
+        margin-bottom: 32px;
+    }
+}
+
+.steps-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @include laptop {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 32px;
+    }
+}
+
+.steps-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 32px;
+    padding: 16px 16px 74px 16px;
+    width: 100%;
+    background-color: #050505;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: -3px 5px 13px 0 rgba(5, 5, 5, 0.06), -12px 20px 23px 0 rgba(5, 5, 5, 0.05), -27px 44px 31px 0 rgba(5, 5, 5, 0.03), -48px 79px 37px 0 rgba(5, 5, 5, 0.01), -75px 123px 40px 0 rgba(5, 5, 5, 0);
+    transition: box-shadow var(--timing-function);
+
+    @include tablet {
+        width: calc((100% - 24px) / 2);
+    }
+
+    @include laptop {
+        width: calc((100% - 32px) / 3);
+        min-height: 290px;
+        gap: 24px;
+    }
+
+    &:hover {
+        .hover-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .blur-background {
+            opacity: 1;
+        }
+    }
+}
+
+.steps-card-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #e4e4e4;
+
+    @include tablet {
+        font-size: 16px;
+    }
+}
+
+.steps-arrow{
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+}

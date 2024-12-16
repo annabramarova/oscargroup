@@ -47,7 +47,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 100px;
   padding: 6px 24px;
   height: 54px;
@@ -132,4 +132,10 @@
     transition: top var(--timing-function);
     z-index: -1;
   }
+}
+
+.btn-arrow {
+  position: absolute;
+  right: 84px;
+  z-index: 0;
 }

@@ -87,6 +87,10 @@ h2 {
   }
 }
 
+.title-white {
+  color: var(--white);
+}
+
 .small-title{
     font-weight: 600;
     font-size: 20px;
@@ -94,6 +98,19 @@ h2 {
     letter-spacing: 0.02em;
     color: var(--white);
 }
+
+.text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+
+  @include tablet {
+    font-size: 16px;
+  }
+    @include laptop {
+      font-size: 18px;
+    }
+  }
 
 .visually-hidden {
   position: absolute;

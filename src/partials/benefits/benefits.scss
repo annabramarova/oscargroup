@@ -1,0 +1,144 @@
+.benefits-title {
+    margin-bottom: 24px;
+
+    @include laptop{
+        max-width: 830px;
+        margin-bottom: 32px;
+    }
+}
+
+.benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include laptop {
+        flex-direction: row;
+    }
+}
+
+.benefits-text {
+    color: var(--black);
+    
+}
+
+.graphs-wrapper {
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+
+    @include tablet {
+        margin-top: 24px;
+        gap: 24px;
+    }
+
+    @include laptop {
+        margin-top: 32px;
+    }
+}
+
+.graph1{
+    border-radius: 32px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 7px 16px 0 rgba(62, 42, 20, 0.04), 0 30px 30px 0 rgba(62, 42, 20, 0.03), 0 67px 40px 0 rgba(62, 42, 20, 0.02), 0 119px 48px 0 rgba(62, 42, 20, 0.01), 0 186px 52px 0 rgba(62, 42, 20, 0);
+    margin-top: 32px;
+
+    @include laptop {
+        margin-top: 80px;
+    }
+}
+
+.graph2{
+    border-radius: 24px;
+    width: calc((100% - 16px) / 2);
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(102, 68, 10, 0.1), 0 15px 15px 0 rgba(102, 68, 10, 0.09), 0 33px 20px 0 rgba(102, 68, 10, 0.05), 0 58px 23px 0 rgba(102, 68, 10, 0.01), 0 91px 26px 0 rgba(102, 68, 10, 0);
+
+    @include tablet {
+            width: calc((100% - 24px) / 2);
+        }
+
+        @include laptop {
+            width: calc((100% - 32px) / 2);
+        }
+    
+}
+
+.benefits-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    @include laptop {
+        flex-direction: column;
+    }
+}
+
+.benefits-card-text-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.benefits-icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+
+.benefits-card {
+    display: flex;
+    align-items:center;
+    width: 100%;
+    border-radius: 32px;
+    padding: 12px 12px 12px 32px;
+    box-shadow: 0 4px 9px 0 rgba(28, 26, 2, 0.06), 0 16px 16px 0 rgba(28, 26, 2, 0.05), 0 36px 21px 0 rgba(28, 26, 2, 0.03), 0 64px 25px 0 rgba(28, 26, 2, 0.01), 0 99px 28px 0 rgba(28, 26, 2, 0);
+    background:  var(--card-bg);
+    min-height: 100px;
+
+    @include tablet {
+        width: calc((100% - 16px) / 2);
+        min-height: 141px;
+    }
+    @include laptop {
+        width: 476px;
+        }
+}
+
+.card-oscar {
+    background-image: url('/img/benefits/bg.avif');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: auto;
+    align-items: start;
+    padding-left: 95px;
+}
+
+.benefits-card-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--white);
+
+    @include tablet {
+        font-size: 20px;
+    }
+
+    @include laptop {
+        font-size: 24px;
+    }
+}
+
+.benefits-card-text {
+    margin-top: 8px;
+    font-weight: 400;
+    color: var(--cards-text);
+}

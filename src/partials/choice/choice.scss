@@ -42,13 +42,9 @@
 }
 
 .choice-subtitle{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.4;
     color: var(--text-light);
 
     @include laptop {
-        font-size: 18px;
         max-width: 1190px;
     }
 }

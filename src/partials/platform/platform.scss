@@ -1,0 +1,120 @@
+.platform-section{
+            background-image: url('/img/platform/bg.avif');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            height: auto;
+            min-height: 500px;
+    
+            @include tablet {
+                background-image: url('/img/platform/bg.avif');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+                max-height: 750px;
+            }
+    
+            @include laptop {
+                background-image: url('/img/platform/bg.avif');
+                max-height: 442px;
+            }
+}
+
+.platform-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.platform-title{
+    display: block;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 10px;
+
+    @include tablet {
+        font-size: 52px;
+    }
+}
+
+
+.platform-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.platform-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--white);
+
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
+.platform-second-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include laptop {
+        max-width: 623px;
+    }
+}
+
+.platform-text {
+    margin-top: 24px;
+    color: var(--white);
+    opacity: 0.9;
+
+    @include tablet {
+        margin-top: 32px;
+    }
+}
+
+
+.platform-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    @include laptop {
+        justify-content: flex-start;
+    }
+}
+
+.platform-btn {
+    width: 260px;
+    color: var(--white);
+}
+
+.platform-btn-2 {
+    position: relative;
+    gap: 16px;
+    border: 1px solid #f1d476;
+    width: 260px;
+    color: var(--white);
+    background-color: transparent;
+    text-align: center;
+
+    @include tablet {}
+}
