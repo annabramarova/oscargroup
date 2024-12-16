@@ -1,0 +1,156 @@
+.accounts-section{
+     background-image: url('/img/accounts/bg.avif');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    @include laptop{
+        padding-bottom: 212px;
+    }
+
+}
+
+.accounts-title-wrap{
+    text-align: center;
+}
+
+.accounts-text{
+    color: var(--white);
+    opacity: 0.9;
+    margin-top: 24px;
+}
+
+.accounts-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 24px;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        justify-content: center;
+    }
+
+    @include laptop {
+        margin-top: 40px;
+    }
+}
+
+.accounts-card:nth-child(odd){
+
+    @include laptop {
+        transform: translateY(69px);
+    }
+}
+
+.accounts-card:nth-child(even) {
+    box-shadow: -2px 16px 12px 0 rgba(9, 10, 9, 0.1);
+        background: linear-gradient(216deg, #c3884d 0%, #795406 100%);
+}
+
+.accounts-card {
+    border-radius: 24px;
+    padding: 24px 32px;
+    box-shadow: -2px 18px 17px 0 rgba(9, 10, 9, 0.1);
+    background: #090a09;
+
+    @include tablet {
+        width: calc((100% - 32px) / 2);
+    }
+
+    @include laptop {
+        width: calc((100% - 64px) / 3);
+    }
+}
+
+.accounts-card-title-wrap{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.accounts-card-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+
+    @include tablet{
+        font-size: 24px;
+    }
+
+    @include laptop {
+            font-size: 28px;
+        }
+        
+}
+
+.accounts-card-text{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.accounts-card-price{
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--white);
+    font-size: 48px;
+
+}
+
+.accounts-card-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.accounts-card-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+
+    @include tablet {
+        font-size: 16px;
+    }
+
+    @include laptop {
+        font-size: 18px;
+    }
+}
+
+.accounts-card-item2{
+    padding-left: 36px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    
+        @include tablet {
+            font-size: 16px;
+        }
+    
+        @include laptop {
+            font-size: 18px;
+        }
+}
+
+.accounts-btn{
+    width: 100%;
+    max-width: 328px;
+    margin-top: 40px;
+    color: var(--white);
+    margin-left: auto;
+}
+
+.btn-white{
+    background: var(--white);
+}
