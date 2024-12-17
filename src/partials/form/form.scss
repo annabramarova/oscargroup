@@ -76,6 +76,7 @@
         flex-direction: row;
     }
 }
+
 .contact-field-wrapper {
     position: relative;
 
@@ -84,18 +85,11 @@
         font-size: 14px;
         line-height: 1.5;
         color: var(--text-light);
-        transition: color 0.3s ease; 
+        transition: color var(--timing-function);
 
         @include tablet {
             font-size: 16px;
         }
-    }
-
-    &:focus-within .form-label {
-        background-image: var(--gold-gradient);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .field-styles {
@@ -107,11 +101,16 @@
         padding: 8px 16px;
         box-shadow: 1px 1px 5px 0 rgba(76, 57, 16, 0.05);
         background-color: var(--white);
+        transition: border-color var(--timing-function); 
 
         &:focus {
-            border: 1px solid #C3884D;
+            border: 1px solid var(--gold);
             outline: none;
         }
+    }
+
+    &:focus-within .form-label {
+        color: var(--gold);
     }
 }
 

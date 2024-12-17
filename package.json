@@ -9,7 +9,11 @@
   },
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "axios": "^1.7.9",
+    "formbouncerjs": "^1.4.6",
+    "micromodal": "^0.4.10",
+    "notiflix": "^3.2.7"
   },
   "devDependencies": {
     "glob": "^8.1.0",

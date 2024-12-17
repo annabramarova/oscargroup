@@ -132,3 +132,13 @@ h2 {
 .gradient{
   background: linear-gradient(71deg, #9a7027 0%, #f1d476 100%);
 }
+
+.error-message,
+#error-msg {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  color: #ff5548;
+  font-size: 12px;
+  letter-spacing: 1px;
+}

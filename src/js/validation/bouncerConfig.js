@@ -1,24 +1,4 @@
-export const bouncerConfig = {
-  customValidations: {
-    isValidPhone: function (field) {
-      // Return true if there's an underscore (_) in the value, indicating an invalid input
-      if (field.value.includes('_')) return true;
-
-      // Return false if there's no underscore, indicating a valid input
-      return false;
-    },
-
-    isValidDuration: function (field) {
-      // Return true if there's an underscore (_) in the value, indicating an invalid input
-      if (field.hasAttribute('data-bouncer-custom-range')) {
-        var value = parseInt(field.value, 10);
-        return !(value >= 1 && value <= 8);
-      }
-
-      // Return false if there's no underscore, indicating a valid input
-      return false;
-    },
-  },
+export const BouncerConfig = {
   // Classes & IDs
   fieldClass: 'error', // Applied to fields with errors
   errorClass: 'error-message', // Applied to the error message for invalid fields
@@ -28,6 +8,7 @@ export const bouncerConfig = {
   // Patterns
   // Validation patterns for specific input types
   patterns: {
+    phone: /^[+]?[0-9]{1,4}[-\s]?[0-9]{1,15}$/,
     email:
       /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$/,
     url: /^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/,
@@ -46,11 +27,12 @@ export const bouncerConfig = {
   // Error messages by error type
   messages: {
     missingValue: {
+      phone: 'Please enter a valid phone number.',
       checkbox: 'This field is required.',
       radio: 'Please select a value.',
       select: 'Please select a value.',
       'select-multiple': 'Please select at least one value.',
-      default: 'Fill out this field.',
+      default: 'Please fill out this field.',
     },
     patternMismatch: {
       email: 'Please enter a valid email address.',
@@ -60,7 +42,7 @@ export const bouncerConfig = {
       date: 'Please use the YYYY-MM-DD format',
       time: 'Please use the 24-hour time format. Ex. 23:00',
       month: 'Please use the YYYY-MM format',
-      default: 'Invalid format.',
+      default: 'Please match the requested format.',
     },
     outOfRange: {
       over: 'Please select a value that is no more than {max}.',
@@ -71,9 +53,6 @@ export const bouncerConfig = {
       under:
         'Please lengthen this text to {minLength} characters or more. You are currently using {length} characters.',
     },
-
-    isValidPhone: 'Invalid number',
-    isValidDuration: 'Enter 1 to 8 hrs.',
   },
 
   // Form Submission
