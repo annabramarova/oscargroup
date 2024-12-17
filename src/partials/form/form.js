@@ -25,10 +25,14 @@ async function sendData(formData) {
     formData.forEach((value, key) => {
       console.log(`${key}: ${value}`);
     });
+    Notify.success('Form is sent successfully', {
+      timeout: 3000,
+      showOnlyTheLastOne: true,
+    });
 
     // MicroModal.show('modal-2', modalConfig);
 
-    // contactForm.reset();
+    contactForm.reset();
 
     // Loading.remove();
   } catch (error) {

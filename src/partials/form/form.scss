@@ -45,6 +45,10 @@
     flex-direction: column;
     gap: 16px;
 
+    @include tablet {
+            max-width: 420px;
+        }
+
     @include laptop {
         max-width: 474px;
     }
@@ -72,9 +76,13 @@
     flex-direction: column;
     gap: 24px;
 
-    @include tablet{
+    @include laptop{
         flex-direction: row;
     }
+}
+
+.iti input{
+    width: 100%;
 }
 
 .contact-field-wrapper {

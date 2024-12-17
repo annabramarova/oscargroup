@@ -14,16 +14,17 @@
             </div>
              <form class="contact-form js-contact-form" autocomplete="off">
                 <div class="contact-field-wrapper">
-                <label class="form-label" for="name">Name</label>
-                <input
-                    class="field-styles"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="enter your name"
-                    required
-                    maxlength="50"
-                />
+                    <label class="form-label" for="name">Name</label>
+                    <input
+                        class="field-styles"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="enter your name"
+                        required
+                        maxlength="50"
+                        data-bouncer-pattern="name"
+                    />
                 </div>
                 <div class="phone-email-wrap">
                     <div class="contact-field-wrapper">
@@ -31,11 +32,14 @@
                         <input
                             class="field-styles input-small"
                             type="tel"
-                            id="tel"
+                            id="phone"
                             name="phone"
                             placeholder="enter your phone number"
                             required
+                            maxlength="10"
                             data-bouncer-pattern="phone"
+                            autocomplete="off"
+                            autocorrect="off"
                         />
                     </div>
                 <div class="contact-field-wrapper">
@@ -48,6 +52,7 @@
                     placeholder="enter your email address"
                     required
                     maxlength="70"
+                    data-bouncer-pattern="email"
                 />
                 </div>
                 </div>
