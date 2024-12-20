@@ -1,23 +1,22 @@
 .hero {
   background-image: url('/img/hero/hero.avif');
-  background-size: contain;
-  background-color:  var(--footer-background);
-  background-position: center;
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
   height: 100svh;
   min-height: 500px;
 
   @include tablet {
     background-image: url('/img/hero/hero.avif');
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
     max-height: 750px;
   }
 
   @include laptop {
     background-image: url('/img/hero/hero.avif');
-    max-height: 1440px;
-    background-size: contain;
+    max-height: 892px;
   }
 }
 
