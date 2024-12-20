@@ -6,10 +6,10 @@ i18next.init({
     en: {
       translation: {
         hero: {
-          title1: 'Flexible and accessible',
-          title2: 'trading',
-          title3: 'conditions',
-          title4: 'for',
+          title1: 'Flexible and accessible ',
+          title2: 'trading ',
+          title3: 'conditions ',
+          title4: 'for ',
           title5: 'CFD trading',
           feature1: 'Reliable',
           feature2: 'Simple',
@@ -26,8 +26,9 @@ i18next.init({
           langTR: 'Tür',
         },
         signup: 'Sign up',
+        tryPlat: 'Try our platform',
         advantage: {
-          title1: 'Advantages of our',
+          title1: 'Advantages of our ',
           title2: 'trading platform',
           text1:
             'Trade from any convenient device from any convenient point on the planet. The same level of comfort on both desktop and mobile devices.',
@@ -50,8 +51,8 @@ i18next.init({
             'Oskar Group provides institutional-grade liquidity to our clients for an asset class that is typically illiquid.',
         },
         choiceSection: {
-          title1: 'Why choose',
-          accentText: 'Oskar Group',
+          title1: 'Why choose ',
+          accentText: 'Oskar Group ',
           title2: 'for your trading needs?',
           subtitle:
             'At Oskar Group, we bring institutional-grade liquidity to an asset class that is traditionally illiquid, ensuring seamless and transparent trading experiences. With a team of seasoned investment professionals, we focus on delivering diverse and robust private market opportunities tailored to your needs. Our fully digitalized investment process simplifies everything, from registration to reporting, ensuring efficiency and convenience. Additionally, our access to secondary markets empowers you with more flexibility and options in your trading journey.',
@@ -67,14 +68,13 @@ i18next.init({
           learnMore: 'Learn More',
         },
         platform: {
-          title1: 'Trade on our innovative',
+          title1: 'Trade on our innovative ',
           title2: 'trading platform',
           item1: 'Advanced trading tools',
           item2: 'Extensive asset selection',
           item3: 'Regulatory compliance',
           item4: 'Investments for any amount',
           text: "Oskar Group is an award-winning platform that allows you to trade the world's financial markets. With a wide range of trading instruments, including forex, commodities, indices, and cryptocurrencies, Oskar Group creates an optimal environment for successful trading in any market conditions. Our platform provides fast transaction execution, reliable data protection, and transparent trading conditions.",
-          btn1: 'Try our platform',
         },
         benefits: {
           title1: 'Take advantage of the many benefits of our ',
@@ -102,9 +102,9 @@ i18next.init({
             'Trading cryptocurrencies, S&P 500, metals, and other assets at your fingertips',
         },
         steps: {
-          title1: 'ONLY',
-          title2: '3 STEPS',
-          title3: 'TO OPEN',
+          title1: 'ONLY ',
+          title2: '3 STEPS ',
+          title3: 'TO OPEN ',
           title4: 'A TRADING ACCOUNT',
           text: 'Oskar Group is an award-winning platform that allows you to trade the global financial markets using BTC, USD Tether, USDC and more.',
           card1Title: 'Go to Registration Page',
@@ -117,15 +117,37 @@ i18next.init({
           card3Text:
             'Replenish your account through your personal account in any convenient way. Be it a credit card or a digital wallet.',
         },
+        account: {
+          title1: 'Choose the account',
+          title2: 'type that suits you',
+          text: 'An initial account type that is suitable for anyone who wants to learn the basics of Forex trading.',
+          card1Title: 'Newbie',
+          card1Text:
+            'An initial account type that is suitable for anyone who wants to learn the basics of Forex trading.',
+          card2Title: 'With experience',
+          card2Text:
+            'Optimal account with balanced trading conditions and an expanded list of financial instruments.',
+          card3Title: 'Professional',
+          card3Text:
+            'An improved account type for experienced traders who confidently trade in the financial markets.',
+          cardMin: 'Minimum deposit: $150',
+          cardLeverage: 'Leverage: 1:100',
+          cardCrypto: 'Cryptocurrency:',
+          cardExecution: 'Instant execution',
+          cardTrading: 'Trading cryptocurrencies and metals',
+          cardInsurance: 'Deposit insurance',
+          cardProtection: 'Deposit protection',
+          cardSupport: '24/5 personal support',
+        },
       },
     },
     tr: {
       translation: {
         hero: {
-          title1: 'Esnek ve erişilebilir',
-          title2: 'ticaret',
-          title3: 'koşullar',
-          title4: 'için',
+          title1: 'Esnek ve erişilebilir ',
+          title2: 'ticaret ',
+          title3: 'koşullar ',
+          title4: 'için ',
           title5: 'CFD ticareti',
           feature1: 'Güvenilir',
           feature2: 'Basit',
@@ -142,8 +164,9 @@ i18next.init({
           langTR: 'Tür',
         },
         signup: 'Kayıt ol',
+        tryPlat: 'Deneyin',
         advantage: {
-          title1: 'Avantajlarımız',
+          title1: 'Avantajlarımız ',
           title2: 'ticaret platformu',
           text1:
             'Herhangi bir uygun cihazdan ve gezegenin herhangi bir noktasından ticaret yapın. Masaüstü ve mobil cihazlarda aynı konfor seviyesinde.',
@@ -166,8 +189,8 @@ i18next.init({
             'Oskar Group, müşterilerimize genellikle likit olmayan bir varlık sınıfında kurumsal düzeyde likidite sağlar.',
         },
         choiceSection: {
-          title1: 'Neden tercih etmelisiniz',
-          accentText: 'Oskar Group',
+          title1: 'Neden tercih etmelisiniz ',
+          accentText: 'Oskar Group ',
           title2: 'ticaret ihtiyaçlarınız için?',
           subtitle:
             'Oskar Group, genellikle likit olmayan bir varlık sınıfında kurumsal düzeyde likidite sağlar ve kesintisiz, şeffaf ticaret deneyimleri sunar. Deneyimli yatırım profesyonelleri ekibimiz, ihtiyaçlarınıza göre çeşitlendirilmiş ve güçlü özel piyasa fırsatları sunmaya odaklanmaktadır. Tamamen dijitalleştirilmiş yatırım sürecimiz, kayıttan raporlama ve başvurulara kadar her şeyi basitleştirerek verimlilik ve rahatlık sağlar. Ayrıca, ikincil piyasalara erişimimiz, ticaret yolculuğunuzda daha fazla esneklik ve seçenek sunar.',
@@ -183,14 +206,13 @@ i18next.init({
           learnMore: 'Daha Fazla Bilgi',
         },
         platform: {
-          title1: 'Yenilikçi ticaret',
+          title1: 'Yenilikçi ticaret ',
           title2: 'platformumuzda işlem yapın',
           item1: 'İleri düzey ticaret araçları',
           item2: 'Geniş varlık seçimi',
           item3: 'Regülasyona uygunluk',
           item4: 'Her miktarda yatırım imkanı',
           text: 'Oskar Group, dünya çapındaki finansal piyasalarda işlem yapmanıza olanak tanıyan ödüllü bir platformdur. Forex, emtialar, endeksler ve kripto paralar gibi geniş bir ticaret enstrümanı yelpazesi ile Oskar Group, her türlü piyasa koşulunda başarılı ticaret yapmanız için ideal bir ortam yaratır. Platformumuz, hızlı işlem yürütme, güvenilir veri koruma ve şeffaf ticaret koşulları sunar.',
-          btn1: 'Deneyin',
         },
         benefits: {
           title1: 'Platformumuzun birçok avantajından yararlanın ',
@@ -218,9 +240,9 @@ i18next.init({
             'Kripto para birimleri, S&P 500, metaller ve diğer varlıklarla ticaret yapın.',
         },
         steps: {
-          title1: 'SADECE',
-          title2: '3 ADIM',
-          title3: 'TİCARET HESABI AÇMAK İÇİN',
+          title1: 'SADECE ',
+          title2: '3 ADIM ',
+          title3: 'TİCARET HESABI AÇMAK İÇİN ',
           title4: '',
           text: 'Oskar Group, BTC, USD Tether, USDC ve daha fazlasını kullanarak küresel finansal piyasalarda ticaret yapmanızı sağlayan ödüllü bir platformdur.',
           card1Title: 'Kayıt Sayfasına Git',
@@ -232,6 +254,28 @@ i18next.init({
           card3Title: 'Para Yatırma',
           card3Text:
             'Kişisel hesabınız üzerinden hesabınızı dilediğiniz şekilde doldurun. İster kredi kartı ister dijital cüzdan olsun.',
+        },
+        account: {
+          title1: 'Hesap türünü',
+          title2: 'seçin',
+          text: 'Forex ticaretinin temellerini öğrenmek isteyen herkes için uygun bir başlangıç hesap türü.',
+          card1Title: 'Yeni Başlayan',
+          card1Text:
+            'Forex ticaretinin temellerini öğrenmek isteyen herkes için uygun bir başlangıç hesap türü.',
+          card2Title: 'Deneyimliler için',
+          card2Text:
+            'Dengeli ticaret koşulları ve genişletilmiş finansal araç listesi ile optimal bir hesap.',
+          card3Title: 'Profesyonel',
+          card3Text:
+            'Finansal piyasalarda güvenle ticaret yapan deneyimli yatırımcılar için geliştirilmiş bir hesap türü.',
+          cardMin: 'Minimum depozito: $150',
+          cardLeverage: 'Kaldıraç: 1:100',
+          cardCrypto: 'Kripto Para:',
+          cardExecution: 'Anında uygulama',
+          cardTrading: 'Kripto para ve metallerle ticaret',
+          cardInsurance: 'Depozito sigortası',
+          cardProtection: 'Depozito koruması',
+          cardSupport: '24/5 kişisel destek',
         },
       },
     },
