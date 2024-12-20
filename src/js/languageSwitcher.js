@@ -24,6 +24,17 @@ document.querySelectorAll('.custom-option').forEach(function (option) {
 function updateText() {
   document.querySelectorAll('[data-i18n]').forEach(function (element) {
     const key = element.getAttribute('data-i18n');
-    element.textContent = i18next.t(key);
+    if (key) {
+      element.textContent = i18next.t(key);
+    }
   });
+
+  document
+    .querySelectorAll('[data-i18n-placeholder]')
+    .forEach(function (element) {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (key) {
+        element.setAttribute('placeholder', i18next.t(key)); // Устанавливаем новый перевод для плейсхолдера
+      }
+    });
 }

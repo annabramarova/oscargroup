@@ -148,6 +148,10 @@ i18next.init({
           phone: 'Phone number',
           email: 'E-mail',
           message: 'Message',
+          name_placeholder: 'enter your name',
+          phone_placeholder: 'enter your phone number',
+          email_placeholder: 'enter your email address',
+          message_placeholder: 'write your message',
           btn: 'Contact us',
           text2:
             'By clicking the “contact us” button you agree to the processing of your personal data. We do not transfer your data to third parties hands.',
@@ -342,6 +346,10 @@ i18next.init({
           phone: 'Telefon numarası',
           email: 'E-posta',
           message: 'Mesaj',
+          name_placeholder: 'adınızı girin',
+          phone_placeholder: 'telefon girin',
+          email_placeholder: 'e-posta girin',
+          message_placeholder: 'mesajınızı yazın',
           btn: 'Bize ulaşın',
           text2:
             '“Bize ulaşın” butonuna tıklayarak kişisel verilerinizin işlenmesini kabul etmiş oluyorsunuz. Verilerinizi üçüncü şahıslara aktarmıyoruz.',
