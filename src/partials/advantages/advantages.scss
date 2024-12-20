@@ -13,6 +13,11 @@
     }
 }
 
+.advantage-title{
+    @include laptop {
+        font-size: 36px;
+    }
+}
 
 .advantage-text-wrap {
     display: flex;
@@ -24,9 +29,7 @@
     @include tablet {
         gap: 24px;
         margin-top: 0;
-    }
-
-   
+    }   
 }
 
 .advantage-text {

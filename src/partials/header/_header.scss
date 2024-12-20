@@ -3,7 +3,7 @@
   z-index: 100;
   padding: 24px 0;
   font-weight: 500;
-  width: 100vw;
+  width: 98vw;
 }
 
 
@@ -122,3 +122,93 @@
     display: none;}
 }
 
+
+.custom-select {
+  position: relative;
+  width: 75px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 10px 2px;
+  color: rgb(166, 167, 162);
+  transition: color var(--timing-function);
+  cursor: pointer;
+  z-index: 1;
+
+  @include laptop {
+    margin-left: 20px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+  
+      &:hover,
+      &:focus {
+        color: var(--gold);
+      }
+    }
+}
+
+
+
+/* Стиль для триггера (отображаемого значения) */
+.custom-select-trigger {
+  gap: 12px;
+  padding: 10px;
+  color: rgb(166, 167, 162);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.custom-options {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  right: 0;
+  background-color: rgba(9, 10, 9, 0.5);
+  z-index: 10;
+  max-height: 150px;
+  width: 100%;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.custom-option {
+  padding: 10px;
+  color: rgb(166, 167, 162);
+  cursor: pointer;
+  text-align: center;
+  display: block;
+}
+
+.custom-option:hover {
+  color: var(--gold);
+}
+
+.custom-select.open .custom-options {
+  display: block;
+}
+
+.custom-select.open .custom-options {
+  display: block;
+}
+
+.lng-arrow-icon {
+  position: absolute;
+  right: 10px;
+  /* Немного отступаем справа */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Центрируем по вертикали */
+  transition: transform 0.3s ease;
+  /* Плавный поворот */
+  transform-origin: center;
+  /* Устанавливаем центр поворота */
+}
+
+/* Поворот стрелки при открытии */
+.custom-select.open .lng-arrow-icon {
+  transform: translateY(-50%) rotate(180deg);
+  /* Поворот стрелки */
+}

@@ -16,7 +16,7 @@
     
             @include laptop {
                 background-image: url('/img/platform/bg.avif');
-                max-height: 442px;
+                max-height: auto;
             }
 }
 

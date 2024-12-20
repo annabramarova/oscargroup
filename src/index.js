@@ -1,6 +1,10 @@
-import './partials/header/mobileMenu/mobileMenu';
-import './js/aos';
-import './partials/faq/faq';
+import './js/aos'; 
+import './js/lng'; 
+
 import './js/validation/bouncerConfig';
-import './partials/form/form';
+import './js/languageSwitcher';
+
+import './partials/header/mobileMenu/mobileMenu'; 
+import './partials/faq/faq'; 
+import './partials/form/form'; 
 import './js/validation/contactFormValidation';

@@ -12,28 +12,46 @@
         /></a>
       </div>
       <div class="header-menu-wrapper menu js-mobile-menu">
-        <a href="" class="signup-btn btn-mob ">Sign up</a>
+        <a href="" class="signup-btn btn-mob" data-i18n="signup">Sign up</a>
         <nav class="header-nav">
           <ul class="nav-list menu-list">
             <li class="nav-item">
-              <a href="#trade" class="nav-link">Trade</a>
+              <a href="#trade" class="nav-link" data-i18n="navbar.trade">Trade</a>
             </li>
             <li class="nav-item">
-              <a href="#markets" class="nav-link">Markets</a>
+              <a href="#markets" class="nav-link" data-i18n="navbar.markets">Markets</a>
             </li>
             <li class="nav-item">
-              <a href="#about-us" class="nav-link">About us</a>
+              <a href="#about-us" class="nav-link" data-i18n="navbar.aboutUs">About us</a>
             </li>
             <li class="nav-item">
-              <a href="#tariffs" class="nav-link">Tariffs</a>
+              <a href="#tariffs" class="nav-link" data-i18n="navbar.tariffs">Tariffs</a>
             </li>
             <li class="nav-item">
-              <a href="#contact-us" class="nav-link">Contact us</a>
+              <a href="#contact-us" class="nav-link" data-i18n="navbar.contactUs">Contact us</a>
             </li>
+          <li>
+            <div class="custom-select">
+              <div class="custom-select-trigger" id="languageSwitcher">
+                Eng               
+              </div>
+              <img
+                  src="./img/down.svg"
+                  alt="arrow"                    
+                  width="16"
+                  height="16"
+                  class="lng-arrow-icon"
+                />
+              <div class="custom-options">
+                <span class="custom-option" data-value="en" data-i18n="navbar.langENG">Eng</span>
+                <span class="custom-option" data-value="tr" data-i18n="navbar.langTR">Tür</span>
+              </div>
+            </div>
+          </li>
           </ul>
         </nav>
         </div>
-      <a href="" class="signup-btn btn-desk">Sign up</a>
+      <a href="" class="signup-btn btn-desk" data-i18n="signup">Sign up</a>
       <div
         class="burger-wrapper js-burger-btn"
         tabindex="0"
