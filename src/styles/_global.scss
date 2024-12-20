@@ -36,6 +36,30 @@ section {
   }
 }
 
+html {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--gold) var(--footer-background); 
+}
+
+::-webkit-scrollbar {
+  width: 2px; 
+  height: 2px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--footer-background); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold); 
+  border-radius: 1px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-gradient); 
+}
+
+
 .container {
   width: 100%;
   margin: 0 auto;
