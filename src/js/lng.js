@@ -118,7 +118,7 @@ i18next.init({
             'Replenish your account through your personal account in any convenient way. Be it a credit card or a digital wallet.',
         },
         account: {
-          title1: 'Choose the account',
+          title1: 'Choose the account ',
           title2: 'type that suits you',
           text: 'An initial account type that is suitable for anyone who wants to learn the basics of Forex trading.',
           card1Title: 'Newbie',
@@ -138,6 +138,62 @@ i18next.init({
           cardInsurance: 'Deposit insurance',
           cardProtection: 'Deposit protection',
           cardSupport: '24/5 personal support',
+        },
+        form: {
+          title1: 'Contact ',
+          title2: 'us',
+          text1:
+            'Our support works around the clock so that you can contact our managers on any issue. We are ready to help you and give practical advice for your success.',
+          name: 'Name',
+          phone: 'Phone number',
+          email: 'E-mail',
+          message: 'Message',
+          btn: 'Contact us',
+          text2:
+            'By clicking the “contact us” button you agree to the processing of your personal data. We do not transfer your data to third parties hands.',
+        },
+        faq: {
+          title1: 'Answers to frequently ',
+          title2: 'asked questions',
+          text: 'In this section you will find answers to the most common questions regarding our services and operating principles. If you have not found the answer to your question, you can write to us by email using the feedback form on the website.',
+          question1: 'How to start working with the Oskar Group company?',
+          answer1:
+            'In order to start working with the Oskar Group company, you should go through a simple registration procedure on our website. Next, you need to make your first deposit by selecting the appropriate section in your personal account, after which all investment work will be carried out by our company, and you, in turn, will receive daily income from this.',
+          question2: 'Can I "lose" and not make money?',
+          answer2_1:
+            'Of course, our project is not a win-win lottery. There is always a risk in this business. But we say that the risk is not only justified, but also minimized. This is exactly what we are aiming for, our business model. The risk minimization strategy includes several components: ',
+          answer2_2:
+            'The first is a team of analysts who is responsible for the project and constantly works with risks of different levels: both short-term and long-term.',
+          answer2_3:
+            'Second, we have a separate investment strategy of 5 criteria, which involves minimizing risks;',
+          answer2_4:
+            'The third is diversification of investments. We clearly maintain a balance between short-term investments, which should bring profit in the near future, and long-term investments, which serve as the basis for our stability and strategic development. Simply put, if we have financial difficulties with one startup, we can compensate for this through profits from others.',
+          answer2_5:
+            "Fourth, the Oskar Group project is based on the personal investments of its owners, who are also the founders of the company. These funds represent 100% of Oskar Group's initial investment in startups, and according to company documents, the share of owners in operating investment activities should never be less than 51% of the total investment that the company can attract. Thus, the founders of our company are not only guarantors of its activities, but also ensure stability of payments for investors, guaranteeing their own investments.",
+          answer2_6:
+            'Fifth, we are constantly negotiating not only with new startups, but also with investment and venture funds, startup incubators and large companies that are interested in IT. We attract them to cooperation at the level of financial support - loans, investments and, in the possible future, ICO, IPO.',
+          answer2_7:
+            'All this is also reflected in our business model and daily work. Follow the project and become our investor to see for yourself how everything works and that you can make money on the technologies of the future today!',
+          question3: 'Are there any restrictions on the withdrawal amount?',
+          answer3:
+            'An investor can withdraw all funds in his personal account in accordance with the personal transaction limit to his payment details. In Oskar Group you can replenish your trading account or withdraw funds from it easily and affordably, and most importantly, it will take a minimum of your time.',
+          question4: 'How quickly are payments made?',
+          answer4:
+            'Investment profits are accrued daily. Applications for withdrawal of funds are processed in a minimum of 5 minutes and no more than 24 hours. However, practice shows that processing the application takes only a couple of hours.',
+          question5: 'Who owns the Forex market and where is it located?',
+          answer5:
+            'Forex does not belong to anyone in particular. Forex is an interbank market, all transactions in which occur directly (or through brokers) between the seller and the buyer. Forex does not depend directly on the government of any country and will exist as long as the current global banking system exists.',
+          question6: 'Is it possible to create several deposits at once?',
+          answer6:
+            'Yes, you can. When you create a new deposit, its amount is added to the total amount of all your deposits. In this case, the interest will be increased by the new amount. As a result, this investment model will bring you even more profit.',
+          question7:
+            "Do you guarantee the confidentiality of investors' personal information?",
+          answer7:
+            'Yes, we guarantee. Personal information of our investors is not transferred to third parties.',
+        },
+        footer: {
+          copyright: '© 2024 All rights reserved',
+          text: 'Leave the ordinary behind and embrace the luxury you deserve. Now is the perfect time to invest in your future!',
         },
       },
     },
@@ -256,7 +312,7 @@ i18next.init({
             'Kişisel hesabınız üzerinden hesabınızı dilediğiniz şekilde doldurun. İster kredi kartı ister dijital cüzdan olsun.',
         },
         account: {
-          title1: 'Hesap türünü',
+          title1: 'Hesap türünü ',
           title2: 'seçin',
           text: 'Forex ticaretinin temellerini öğrenmek isteyen herkes için uygun bir başlangıç hesap türü.',
           card1Title: 'Yeni Başlayan',
@@ -276,6 +332,62 @@ i18next.init({
           cardInsurance: 'Depozito sigortası',
           cardProtection: 'Depozito koruması',
           cardSupport: '24/5 kişisel destek',
+        },
+        form: {
+          title1: 'İletişim ',
+          title2: 'bize',
+          text1:
+            'Destek ekibimiz, herhangi bir konuda bizimle iletişime geçebilmeniz için 7/24 hizmet vermektedir. Size yardımcı olmaya ve başarınız için pratik tavsiyeler vermeye hazırız.',
+          name: 'Tam Ad',
+          phone: 'Telefon numarası',
+          email: 'E-posta',
+          message: 'Mesaj',
+          btn: 'Bize ulaşın',
+          text2:
+            '“Bize ulaşın” butonuna tıklayarak kişisel verilerinizin işlenmesini kabul etmiş oluyorsunuz. Verilerinizi üçüncü şahıslara aktarmıyoruz.',
+        },
+        faq: {
+          title1: 'Sıkça Sorulan ',
+          title2: 'Sorulara Yanıtlar',
+          text: 'Bu bölümde, hizmetlerimiz ve işletme prensiplerimizle ilgili en yaygın sorulara yanıtlar bulabilirsiniz. Sorunuza yanıt bulamazsanız, web sitemizdeki geri bildirim formunu kullanarak bize e-posta gönderebilirsiniz.',
+          question1: 'Oskar Group şirketiyle çalışmaya nasıl başlanır?',
+          answer1:
+            'Oskar Group şirketiyle çalışmaya başlamak için web sitemizde basit bir kayıt işleminden geçmeniz gerekir. Ardından, kişisel hesabınızda ilgili bölümü seçerek ilk yatırımınızı yapmanız gerekmektedir. Sonrasında tüm yatırım işlemleri şirketimiz tarafından yapılacak ve siz de bunun karşılığında günlük gelir elde edeceksiniz.',
+          question2: 'Para kaybedebilir miyim ve kazanamayabilir miyim?',
+          answer2_1:
+            'Tabii ki, projemiz bir kazanç garantili piyango değildir. Bu işte her zaman bir risk vardır. Ancak biz diyoruz ki, bu risk yalnızca haklı değil, aynı zamanda minimize edilmiştir. İşte tam olarak amacımız, iş modelimiz budur. Risk azaltma stratejisi birkaç bileşenden oluşmaktadır:',
+          answer2_2:
+            'Birincisi, projeden sorumlu ve farklı seviyelerdeki risklerle sürekli olarak çalışan analist ekibimizdir.',
+          answer2_3:
+            'İkincisi, riskleri minimize etmeyi amaçlayan 5 kriterden oluşan ayrı bir yatırım stratejimiz bulunmaktadır.',
+          answer2_4:
+            'Üçüncüsü, yatırımların çeşitlendirilmesidir. Kısa vadeli yatırımlar ile uzun vadeli yatırımlar arasında dengeyi net bir şekilde koruyoruz. Kısa vadeli yatırımlar, yakın gelecekte kar getirecek yatırımlar iken, uzun vadeli yatırımlar ise şirketimizin istikrarı ve stratejik gelişimi için temel oluşturur. Basitçe söylemek gerekirse, bir girişimle mali zorluklar yaşarsak, diğerlerinden elde edilen karlarla bunu telafi edebiliriz.',
+          answer2_5:
+            'Dördüncüsü, Oskar Group projesi, şirketin kurucuları olan sahiplerinin kişisel yatırımlarıyla temellendirilmiştir. Bu fonlar, Oskar Group’un girişimlere yaptığı ilk yatırımların %100’ünü temsil etmektedir ve şirket belgelerine göre, sahiplerin işletme yatırım faaliyetlerindeki payı, şirketin çekebileceği toplam yatırımların %51’inden az olmamalıdır. Bu nedenle, şirketimizin kurucuları yalnızca faaliyetlerinin garanti edicileri değil, aynı zamanda yatırımcılar için ödeme istikrarını sağlayarak kendi yatırımlarını garanti altına almaktadır.',
+          answer2_6:
+            'Beşincisi, yalnızca yeni girişimlerle değil, aynı zamanda yatırım ve girişim sermayesi fonları, startup inkübatörleri ve IT alanında büyük şirketlerle de sürekli olarak görüşmeler yapıyoruz. Onları, finansal destek düzeyinde - krediler, yatırımlar ve gelecekte olası ICO, IPO’lar gibi işbirlikleri için çekiyoruz.',
+          answer2_7:
+            'Tüm bunlar, iş modelimize ve günlük çalışmalarımıza yansımaktadır. Projeyi takip edin ve bizim yatırımcımız olun, her şeyin nasıl çalıştığını ve bugün geleceğin teknolojileriyle para kazanabileceğinizi kendiniz görün!',
+          question3: 'Çekim tutarına dair herhangi bir sınırlama var mı?',
+          answer3:
+            'Bir yatırımcı, kişisel işlem limiti doğrultusunda, kişisel hesabındaki tüm fonları ödeme bilgilerine çekebilir. Oskar Group’ta, ticaret hesabınızı kolayca doldurabilir veya fonlarınızı çekebilirsiniz ve en önemlisi, bu işlemler minimum zamanınızı alır.',
+          question4: 'Ödemeler ne kadar hızlı yapılır?',
+          answer4:
+            'Yatırım karları her gün birikir. Fon çekim başvuruları minimum 5 dakika ve en fazla 24 saat içinde işlenir. Ancak, uygulamada başvuru işleme süresi genellikle sadece birkaç saat sürmektedir.',
+          question5: 'Forex piyasasının sahibi kimdir ve nerede bulunur?',
+          answer5:
+            'Forex, kimseye ait değildir. Forex, tüm işlemlerin doğrudan (ya da aracılar aracılığıyla) satıcı ve alıcı arasında gerçekleştiği bir bankalar arası piyasadır. Forex, herhangi bir ülkenin hükümetine doğrudan bağlı değildir ve mevcut küresel bankacılık sistemi var olduğu sürece var olmaya devam edecektir.',
+          question6: 'Birden fazla yatırım yapmak mümkün müdür?',
+          answer6:
+            'Evet, mümkündür. Yeni bir yatırım oluşturduğunuzda, bu yatırımın tutarı tüm yatırımlarınızın toplamına eklenir. Bu durumda, faiz yeni tutarla artacaktır. Sonuç olarak, bu yatırım modeli size daha fazla kar sağlayacaktır.',
+          question7:
+            'Yatırımcıların kişisel bilgilerinin gizliliği garantileniyor mu?',
+          answer7:
+            'Evet, garantiliyoruz. Yatırımcılarımızın kişisel bilgileri üçüncü şahıslara verilmez.',
+        },
+        footer: {
+          copyright: '© 2024 Tüm hakları saklıdır',
+          text: 'İlkel olanı geride bırakın ve hak ettiğiniz lükse kucak açın. Şimdi, geleceğinize yatırım yapmanız için mükemmel bir zaman!',
         },
       },
     },
