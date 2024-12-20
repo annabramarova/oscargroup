@@ -21,7 +21,8 @@
     }
 
     @include laptop{
-        padding: 44px 51px;
+        padding: 40px;
+        height: 518px;
     }
 }
 
@@ -54,13 +55,26 @@
     }
 }
 
+.form-text-wrapper{
+    position: relative;
+}
+
 .form-img{
     margin-left: auto;
     margin-right: auto;
     
     @include tablet {
-            transform: translateY(36px);
+        position: absolute;
+        bottom: -32px;
+        left: -32px;
         }
+
+    @include laptop {
+        width: 452px;
+        height: 334px;
+        left: -10px;
+        bottom: -40px;
+    }
     
 }
 
@@ -136,7 +150,7 @@
     margin: 16px 0 24px;
 
     @include tablet {
-        margin: 32px 0 40px;
+        margin: 16px 0 40px;
     }
 }
 
@@ -155,7 +169,6 @@
 }
 
 .contact-form-btn{
-    max-width: 100%;
-    width: 290px;
+    width: 100%;
     color: var(--white);
 }
