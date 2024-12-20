@@ -125,18 +125,19 @@
 
 .custom-select {
   position: relative;
-  width: 75px;
+  width: 60px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
-  padding: 10px 2px;
   color: rgb(166, 167, 162);
   transition: color var(--timing-function);
   cursor: pointer;
-  z-index: 1;
+  z-index: 100;
 
   @include laptop {
+    width: 75px;
     margin-left: 20px;
+    padding: 10px 2px;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -149,65 +150,75 @@
 }
 
 
-
-/* Стиль для триггера (отображаемого значения) */
 .custom-select-trigger {
   gap: 12px;
-  padding: 10px;
+  padding: 10px 0;
   color: rgb(166, 167, 162);
   cursor: pointer;
   border-radius: 4px;
+
+  @include laptop {
+      padding: 10px;
+    }
+
 }
 
 .custom-options {
   display: none;
-  position: absolute;
-  top: 119%;
-  left: 0;
-  right: 0;
-  background-color: rgba(9, 10, 9, 0.5);
-  z-index: 10;
+  background-color: transparent;
   max-height: 150px;
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
+  z-index: 100;
+
+  @include laptop {
+    position: absolute;
+    background-color: rgba(9, 10, 9, 0.5);
+    top: 119%;
+    left: 0;
+    right: 0;
+  }
 }
 
 .custom-option {
-  padding: 10px;
   color: rgb(166, 167, 162);
   cursor: pointer;
-  text-align: center;
   display: block;
+
+  @include laptop {
+    padding: 10px;
+  }
 }
 
 .custom-option:hover {
   color: var(--gold);
 }
 
-.custom-select.open .custom-options {
-  display: block;
+.custom-select.open {
+  height: auto;
 }
 
 .custom-select.open .custom-options {
-  display: block;
+  display: flex;
+  flex-direction: column;
+    gap: 16px;
+    padding-top: 8px;
 }
 
 .lng-arrow-icon {
   position: absolute;
   right: 10px;
-  /* Немного отступаем справа */
-  top: 50%;
+  top: 22px;
   transform: translateY(-50%);
-  /* Центрируем по вертикали */
   transition: transform 0.3s ease;
-  /* Плавный поворот */
   transform-origin: center;
-  /* Устанавливаем центр поворота */
+
+  @include laptop {
+    top: 50%;
+  }
 }
 
-/* Поворот стрелки при открытии */
 .custom-select.open .lng-arrow-icon {
-  transform: translateY(-50%) rotate(180deg);
-  /* Поворот стрелки */
+      transform: translateY(-50%) rotate(180deg);
 }
