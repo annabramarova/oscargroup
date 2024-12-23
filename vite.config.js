@@ -8,7 +8,10 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
+      input: [
+        ...glob.sync('./src/*.html'), // Усі HTML з кореневої папки
+        ...glob.sync('./src/tr/*.html'), // Усі HTML з папки solutions
+      ],
     },
     outDir: '../dist',
   },
@@ -17,5 +20,5 @@ export default defineConfig({
     host: '0.0.0.0',
   },
 
-  plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+  plugins: [injectHTML(), FullReload(['./src/**/*'])],
 });

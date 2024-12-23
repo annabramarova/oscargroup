@@ -1,5 +1,4 @@
 import './js/aos'; 
-import './js/lng'; 
 
 import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
