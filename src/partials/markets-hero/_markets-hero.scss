@@ -1,0 +1,41 @@
+.markets-hero {
+  background-image: url('/img/hero/hero-markets.avif');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100svh;
+  min-height: 500px;
+
+  @include tablet {
+    background-image: url('/img/hero/hero-markets.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 750px;
+  }
+
+  @include laptop {
+    background-image: url('/img/hero/hero-markets.avif');
+    background-position: bottom center;
+    max-height: 100svh;
+  }
+}
+
+.markets-hero .container { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.markets-title-wrap{
+  text-align: center;
+}
+
+.markets-hero-text{
+  color: var(--white);
+  margin-top: 24px;
+
+  @include laptop {
+    margin-top: 32px;
+  }
+}

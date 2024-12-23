@@ -86,16 +86,16 @@
     flex-direction: column;
 }
 
+
 .benefits-icon{
     width: 40px;
     height: 40px;
     margin-right: 12px;
 }
 
-
 .benefits-card {
     display: flex;
-    align-items:center;
+    align-items: center;
     width: 100%;
     border-radius: 32px;
     padding: 12px 12px 12px 32px;
@@ -118,8 +118,6 @@
     background-position: top left;
     background-repeat: no-repeat;
     height: auto;
-    align-items: start;
-    padding-left: 80px;
 }
 
 .benefits-card-title {
