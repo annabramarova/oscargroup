@@ -60,21 +60,7 @@
 }
 
 .form-img{
-    margin-left: auto;
-    margin-right: auto;
-    
-    @include tablet {
-        position: absolute;
-        bottom: -32px;
-        left: -32px;
-        }
-
-    @include laptop {
-        width: 452px;
-        height: 334px;
-        left: -10px;
-        bottom: -40px;
-    }
+    margin-bottom: 32px;
     
 }
 
