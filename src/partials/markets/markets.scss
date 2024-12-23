@@ -85,24 +85,34 @@
 }
 
 .markets-colums {
-    width: 1104px;
-    height: 514px;
+    width: 100%;
+
+    @include laptop {
+        width: 1104px;
+        height: 514px;
+    }
 }
 
 .markets-rows-wrap{
     position: absolute;
-    border-radius: 20px;
+    left: 45px;
+    top: 100px;
     padding: 0 16px 32px 0;
-    left: 95px;
-    top: 147px;
-    height: 398px;
+    height: 200px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--gold) #f1f1f1;
     
 
-    width: 100%;
-    max-width: 1048px;
+    width: 640px;
+
+    @include laptop {
+            left: 95px;
+            top: 147px;
+            height: 398px;
+            padding: 0 16px 32px 0;
+            width: 1048px;
+        }
 }
 
 .markets-rows-wrap::-webkit-scrollbar {

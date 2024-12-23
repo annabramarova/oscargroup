@@ -17,8 +17,8 @@
 
 .footer-nav-list{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 
   @include tablet {
@@ -104,6 +104,7 @@
   line-height: 1.4;
   color: var(--footer-text);
   margin-top: 32px;
+  text-align: center;
 
   @include tablet {
     max-width: 600px;
