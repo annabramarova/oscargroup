@@ -1,40 +1,27 @@
-import i18next from 'i18next';
+document.addEventListener('DOMContentLoaded', function () {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  const customSelect = document.querySelector('.custom-select');
+  const options = document.querySelectorAll('.custom-option');
+  const trigger = document.querySelector('.custom-select-trigger');
 
-
-document
-  .querySelector('.custom-select-trigger')
-  .addEventListener('click', function () {
-    document.querySelector('.custom-select').classList.toggle('open');
+  languageSwitcher.addEventListener('click', function () {
+    customSelect.classList.toggle('open');
   });
 
-document.querySelectorAll('.custom-option').forEach(function (option) {
-  option.addEventListener('click', function () {
-    const value = option.getAttribute('data-value');
-    const displayText = option.textContent;
-    document.querySelector('.custom-select-trigger').textContent = displayText;
+  options.forEach(option => {
+    option.addEventListener('click', function (event) {
+      const selectedLang = event.target.getAttribute('data-value');
+      const selectedText = event.target.textContent;
 
-    i18next.changeLanguage(value, () => {
-      updateText();
+      trigger.textContent = selectedText;
+
+      customSelect.classList.remove('open');
     });
-
-    document.querySelector('.custom-select').classList.remove('open');
   });
-});
 
-function updateText() {
-  document.querySelectorAll('[data-i18n]').forEach(function (element) {
-    const key = element.getAttribute('data-i18n');
-    if (key) {
-      element.textContent = i18next.t(key);
+  document.addEventListener('click', function (event) {
+    if (!customSelect.contains(event.target)) {
+      customSelect.classList.remove('open');
     }
   });
-
-  document
-    .querySelectorAll('[data-i18n-placeholder]')
-    .forEach(function (element) {
-      const key = element.getAttribute('data-i18n-placeholder');
-      if (key) {
-        element.setAttribute('placeholder', i18next.t(key)); // Устанавливаем новый перевод для плейсхолдера
-      }
-    });
-}
+});
