@@ -1,5 +1,6 @@
 import './js/aos'; 
-import './js/animated-numbers'
+import './js/animated-numbers';
+import './partials/advantages/chart';
 
 import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
