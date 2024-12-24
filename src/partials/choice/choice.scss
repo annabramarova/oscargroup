@@ -69,7 +69,8 @@
 
 .choice-card {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     border-radius: 32px;
     padding: 24px;
     width: 100%;
@@ -84,6 +85,8 @@
     }
 
     @include laptop {
+        flex-direction: column;
+        align-items: flex-start;
         width: 294px;
     }
 
@@ -160,10 +163,11 @@
     border-radius: 50%;
     width: 72px;
     height: 72px;
-    margin-bottom: 24px;
+    margin-right: 24px;
     
-    @include tablet {
-        margin-bottom: 40px;}
+    @include laptop {
+        margin-bottom: 40px;
+    }
 }
 
 .choices-arrow-wrap {
