@@ -14,8 +14,22 @@
 }
 
 .advantage-title{
+    text-align: center;
     @include laptop {
+        text-align: left;
         font-size: 36px;
+    }
+}
+
+.advantage-signupTitle{
+    @include laptop {
+            max-width: 320px;
+        }
+}
+
+.advantage-signupTitleTr {
+    @include laptop {
+        max-width: 370px;
     }
 }
 
@@ -34,6 +48,7 @@
 
 .advantage-text {
     color: var(--text-light);
+    font-size: 16px;
 
     @include tablet {
         width: 420px;
@@ -41,6 +56,7 @@
 
     @include laptop {
         width: 810px;
+        font-size: 18px;
     }
 }
 
@@ -73,19 +89,21 @@
     background-size: cover;
     background-position: bottom left;
     background-repeat: no-repeat;
+    overflow: hidden;
     width: 100%;
-    border-radius: 24px;
+        aspect-ratio: 343 / 144;
+    border-radius: 16px;
     padding: 16px 24px;
     color: var(--white);
     box-shadow: -1px 5px 11px 0 rgba(102, 68, 10, 0.08), -3px 19px 19px 0 rgba(102, 68, 10, 0.07), -7px 43px 26px 0 rgba(102, 68, 10, 0.04), -12px 76px 31px 0 rgba(102, 68, 10, 0.01), -19px 119px 34px 0 rgba(102, 68, 10, 0);
 
-    @include tablet {
-        width: 490px;
-        height: 214px;
+    @include tablet{
+        border-radius: 24px;
     }
 
-    @include laptop {
+    @include laptop {        
         width: 509px;
+        height: 214px;
     }
 }
 
@@ -106,39 +124,57 @@
 
 .advantage-chart-number-wrap{
     margin-left: auto;
-    margin-right: 44px;
-    margin-top: 8px;
+
+    @include laptop {
+        margin-right: 44px;
+            margin-top: 8px;
+    }
 }
 
 .advantage-chart-number{
     margin-left: auto;
     font-weight: 500;
-    font-size: 64px;
+    font-size: 32px;
     line-height: 1;
     letter-spacing: 0.03em;
+
+    @include tablet {
+        font-size: 64px;
+    }
 }
 
 .advantage-chart-k{
-    font-size: 40px;
+    font-size: 18px;
     background: radial-gradient(1071.68% 26.55% at 50.00%  50.00%, rgb(249, 194, 57) 10.899963229894638%, rgb(245, 236, 205) 32.399964332580566%, rgb(218, 165, 32) 92.39996075630188%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include tablet {
+            font-size: 40px;
+        }
 }
 
 .advantage-diagram {
     position: absolute;
-    width: 440px;
+    width: 88%;
     height: 0;
-    left: 54px;
-    bottom: 34px;
+    right: 0;
+    bottom: 29px;
     overflow: hidden;
     transition: height 1s ease-in-out;
+
+    @include tablet {
+        width: 440px;
+        left: 54px;
+        bottom: 34px;
+    }
 }
 
 .advantage-chart-gold{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 8px;
     border-radius: 24px;
     padding: 16px;
@@ -148,30 +184,35 @@
     background: linear-gradient(216deg, #c3884d 0%, #795406 100%);
     color: var(--white);
 
-
-    @include laptop {
-        width: 257px;
-        height: 214px;
-        gap: 23px;
+    @include tablet {
+        width: 310px;
     }
+        @include laptop {
+            width: 257px;
+            height: 214px;
+            gap: 23px;
+        }
 }
 
 .gold-percent{
     font-weight: 500;
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1;
-    text-align: right;
     color: var(--white);
+    text-align: left;
     
         @include tablet {
-            text-align: left;
+            font-size: 48px;
+        }
+
+        @include laptop{
             font-size: 64px;
         }
 
 }
 
 .gold-accent{
-    font-size: 32px;
+    font-size: 16px;
     @include tablet {
             font-size: 40px;
         }
@@ -179,13 +220,9 @@
 
 .gold-text{
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.8);
-
-    @include tablet {
-            font-size: 16px;
-        }
 }
 
 .gold-text-bold{
@@ -202,9 +239,15 @@
     background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
+    height: 371px;
     border-radius: 24px;
-    padding: 40px 16px;
+    padding: 21px 16px;
     box-shadow: 0 10px 22px 0 rgba(78, 55, 29, 0.1), 0 41px 41px 0 rgba(78, 55, 29, 0.09), 0 91px 55px 0 rgba(78, 55, 29, 0.05), 0 163px 65px 0 rgba(78, 55, 29, 0.01), 0 254px 71px 0 rgba(78, 55, 29, 0);
+
+    @include tablet {
+        height: 595px;
+    }
+
 }
 
 .advantage-decor-content{
@@ -214,7 +257,6 @@
     border-radius: 24px;
     padding: 24px;
     width: 100%;
-    height: 239px;
 }
 
 .advantage-decor-text{
@@ -276,18 +318,27 @@
 
 .advantages-increase-pecrent{
     font-weight: 500;
-    font-size: 64px;
+    font-size: 32px;
     line-height: 1.4;
     letter-spacing: 0.02em;
+
+    @include laptop {
+        font-size: 64px;
+    }
 }
 
 .pecrent-accent{
-    font-size: 40px;
+    font-size: 20px;
+
+    @include laptop {
+            font-size: 40px;
+        }
 }
 
 .increase-text{
     color: var(--text-color);
     margin-top: 16px;
+    font-size: 16px;
 
     @include tablet {
         margin-top: 26px;
@@ -327,6 +378,8 @@
 
 
 .advantage-signup-chart{
+    position: relative;
+    overflow: hidden;
     width: 100%;
     background: #0a0a0a;
     border-radius: 16px;
@@ -340,12 +393,19 @@
 
 .advantage-signup-slides{
     display: flex;
-    flex-direction: column;
     gap: 24px;
     color: var(--white);
+    animation: slide-animation 20s linear infinite;
 
-    @include laptop {
-        flex-direction: row;
+}
+
+@keyframes slide-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -364,7 +424,7 @@
     justify-content: space-between;
     border-radius: 16px;
     padding: 24px;
-    width: 100%;
+    min-width: 250px;
     min-height: 140px;
     background: #121818;
 }
@@ -384,12 +444,11 @@
 .crypto-change {
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .crypto-name {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
     letter-spacing: 0.02em;
     color: rgba(255, 255, 255, 0.8);
@@ -402,6 +461,13 @@
     color: var(--white);
 }
 
+.crypto-percent {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--white);
+}
+
 .advantage-signup-wrap{
     display: flex;
     flex-direction: column;
@@ -409,12 +475,9 @@
     gap: 48px;
     margin-top: 24px;
 
-    @include tablet {
-        margin-top: 64px;
-    }
-
     @include laptop {
         flex-direction: row;
+        margin-top: 64px;
         gap: 64px;
     }
 }
@@ -423,4 +486,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.crypto-value, .crypto-percent {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.crypto-value.up, .crypto-percent.up{
+    color: green;
+}
+
+.crypto-value.down, .crypto-percent.down {
+    color: red;
 }
