@@ -24,3 +24,10 @@ new numberRush('advantage-agreement', {
   maxNumber: 80,
   steps: 1,
 });
+
+
+new numberRush('active-clients', {
+  speed: 80,
+  maxNumber: 25000,
+  steps: 499,
+});
