@@ -1,8 +1,11 @@
 .markets-subtitle{
-    margin-top: 24px;
+    margin-top: 16px;
+    text-align: start;
 
     @include laptop {
         max-width: 814px;
+        margin-top: 24px;
+        text-align: center;
     }
 }
 

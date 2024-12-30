@@ -1,75 +1,138 @@
-const data = [
-  {
-    category: 'INDICES',
-    rows: [
+(function () {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src =
+    'https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js';
+  script.async = true;
+
+  script.innerHTML = JSON.stringify({
+    width: '100%',
+    height: '100%',
+    symbolsGroups: [
       {
-        name: 'S&P 500',
-        value: 5856.7,
-        change: -14.5,
-        chgPercent: '-0.17%',
-        open: 5874.0,
-        high: 5878.6,
-        low: 5800.7,
-        prev: 5874.0,
+        name: 'Indices',
+        originalName: 'Indices',
+        symbols: [
+          {
+            name: 'FOREXCOM:SPXUSD',
+            displayName: 'S&P 500 Index',
+          },
+          {
+            name: 'FOREXCOM:NSXUSD',
+            displayName: 'US 100 Cash CFD',
+          },
+          {
+            name: 'FOREXCOM:DJI',
+            displayName: 'Dow Jones Industrial Average Index',
+          },
+          {
+            name: 'INDEX:NKY',
+            displayName: 'Japan 225',
+          },
+          {
+            name: 'INDEX:DEU40',
+            displayName: 'DAX Index',
+          },
+          {
+            name: 'FOREXCOM:UKXGBP',
+            displayName: 'FTSE 100 Index',
+          },
+        ],
       },
       {
-        name: 'US 100',
-        value: 21231.4,
-        change: -14.5,
-        chgPercent: '-0.17%',
-        open: 21128.8,
-        high: 21279.9,
-        low: 20735.6,
-        prev: 21128.8,
+        name: 'Futures',
+        originalName: 'Futures',
+        symbols: [
+          {
+            name: 'CME_MINI:ES1!',
+            displayName: 'S&P 500',
+          },
+          {
+            name: 'CME:6E1!',
+            displayName: 'Euro',
+          },
+          {
+            name: 'COMEX:GC1!',
+            displayName: 'Gold',
+          },
+          {
+            name: 'NYMEX:CL1!',
+            displayName: 'WTI Crude Oil',
+          },
+          {
+            name: 'NYMEX:NG1!',
+            displayName: 'Gas',
+          },
+          {
+            name: 'CBOT:ZC1!',
+            displayName: 'Corn',
+          },
+        ],
       },
-      // Add other rows here
+      {
+        name: 'Bonds',
+        originalName: 'Bonds',
+        symbols: [
+          {
+            name: 'CBOT:ZB1!',
+            displayName: 'T-Bond',
+          },
+          {
+            name: 'CBOT:UB1!',
+            displayName: 'Ultra T-Bond',
+          },
+          {
+            name: 'EUREX:FGBL1!',
+            displayName: 'Euro Bund',
+          },
+          {
+            name: 'EUREX:FBTP1!',
+            displayName: 'Euro BTP',
+          },
+          {
+            name: 'EUREX:FGBM1!',
+            displayName: 'Euro BOBL',
+          },
+        ],
+      },
+      {
+        name: 'Forex',
+        originalName: 'Forex',
+        symbols: [
+          {
+            name: 'FX:EURUSD',
+            displayName: 'EUR to USD',
+          },
+          {
+            name: 'FX:GBPUSD',
+            displayName: 'GBP to USD',
+          },
+          {
+            name: 'FX:USDJPY',
+            displayName: 'USD to JPY',
+          },
+          {
+            name: 'FX:USDCHF',
+            displayName: 'USD to CHF',
+          },
+          {
+            name: 'FX:AUDUSD',
+            displayName: 'AUD to USD',
+          },
+          {
+            name: 'FX:USDCAD',
+            displayName: 'USD to CAD',
+          },
+        ],
+      },
     ],
-  },
-  {
-    category: 'FUTURES',
-    rows: [
-      {
-        name: 'Gold',
-        value: 5856.7,
-        change: -14.5,
-        chgPercent: '-0.17%',
-        open: 5874.0,
-        high: 5878.6,
-        low: 5800.7,
-        prev: 5874.0,
-      },
-      // Add other rows here
-    ],
-  },
-  // Add other categories here
-];
-
-function renderTable() {
-  const tableBody = document.querySelector('#dynamic-table tbody');
-  tableBody.innerHTML = '';
-
-  data.forEach(section => {
-    // Add category row
-    const categoryRow = document.createElement('tr');
-    categoryRow.innerHTML = `<td colspan="8" class="category">${section.category}</td>`;
-    tableBody.appendChild(categoryRow);
-
-    // Add data rows
-    section.rows.forEach(row => {
-      const dataRow = document.createElement('tr');
-      dataRow.innerHTML = `
-                    <td>${row.name}</td>
-                    <td>${row.value}</td>
-                    <td>${row.change}</td>
-                    <td>${row.chgPercent}</td>
-                    <td>${row.open}</td>
-                    <td>${row.high}</td>
-                    <td>${row.low}</td>
-                    <td>${row.prev}</td>
-                `;
-      tableBody.appendChild(dataRow);
-    });
+    showSymbolLogo: true,
+    isTransparent: true,
+    colorTheme: 'light',
+    locale: 'en',
   });
-}
 
-renderTable();
+  document
+    .querySelector('.tradingview-widget-container__widget')
+    .appendChild(script);
+})();

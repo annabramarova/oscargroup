@@ -168,12 +168,15 @@
     justify-content: center;
     background-color: var(--white);
     border-radius: 50%;
-    width: 72px;
-    height: 72px;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 16px;
     margin-right: 8px;
     
     @include laptop {
         margin-bottom: 40px;
+        width: 72px;
+        height: 72px;
     }
 }
 
