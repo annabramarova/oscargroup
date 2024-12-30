@@ -1,4 +1,3 @@
-import './partials/loader/loader';
 import './js/aos';
 import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
