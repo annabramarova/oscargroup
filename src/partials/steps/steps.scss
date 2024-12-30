@@ -7,10 +7,10 @@
 }
 
 .steps-text{
-    margin-bottom: 24px;
+    text-align: start;
 
     @include tablet {
-        margin-bottom: 32px;
+        text-align: center;
     }
 }
 
@@ -18,12 +18,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
+    gap: 16px;
+    margin-top: 24px;
 
     @include tablet {
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 32px;
+        gap: 24px;
     }
 
     @include laptop {

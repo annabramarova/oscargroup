@@ -8,14 +8,16 @@
 .form-wrapper{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     border-radius: 32px;
     border: 1px solid #C3884D;
-    padding: 32px;
+    padding: 24px 16px;
     box-shadow: -2px 18px 18px 0 rgba(95, 67, 24, 0.05);
     background-color: var(--white);
 
     @include tablet{
+        gap: 32px;
+        padding: 32px;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -26,13 +28,24 @@
     }
 }
 
+.form-title{
+    font-size: 20px;
+
+    @include tablet {
+        font-size: 40px;
+    }
+}
 
 .form-text{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
     color: var(--text-light);
-    margin-top: 20px;
+    margin-top: 16px;
+
+    @include tablet {
+        margin-top: 20px;
+    }
 
 
     @include laptop {
@@ -60,7 +73,17 @@
 }
 
 .form-img{
-    margin-bottom: 32px;
+    width: 258px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+        width: 331px;
+        margin-bottom: 32px;
+        margin-left: 0;
+    }
+
     
 }
 
@@ -74,10 +97,11 @@
 .phone-email-wrap{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
 
     @include laptop{
         flex-direction: row;
+        gap: 24px;
     }
 }
 
@@ -133,7 +157,8 @@
     font-size: 12px;
     line-height: 1.4;
     color: var(--text-light);
-    margin: 16px 0 24px;
+    margin-bottom: 24px;
+    text-align: start;
 
     @include tablet {
         margin: 16px 0 40px;

@@ -1,5 +1,10 @@
 .benefits-title {
     margin-bottom: 24px;
+    text-align: center;
+
+    @include tablet {
+        text-align: start;
+    }
 
     @include laptop{
         max-width: 830px;
@@ -114,13 +119,14 @@
     align-items: center;
     width: 100%;
     border-radius: 32px;
-    padding: 12px 12px 12px 32px;
+    padding: 12px 12px 12px 24px;
     box-shadow: 0 4px 9px 0 rgba(28, 26, 2, 0.06), 0 16px 16px 0 rgba(28, 26, 2, 0.05), 0 36px 21px 0 rgba(28, 26, 2, 0.03), 0 64px 25px 0 rgba(28, 26, 2, 0.01), 0 99px 28px 0 rgba(28, 26, 2, 0);
     background:  var(--card-bg);
     min-height: 100px;
 
     @include tablet {
         width: calc((100% - 16px) / 2);
+        padding: 12px 12px 12px 32px;
         min-height: 141px;
     }
     @include laptop {
@@ -155,4 +161,9 @@
     margin-top: 8px;
     font-weight: 400;
     color: var(--cards-text);
+    font-size: 14px;
+
+    @include tablet {
+        font-size: 16px;
+    }
 }

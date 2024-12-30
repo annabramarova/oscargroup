@@ -49,6 +49,7 @@
 .advantage-text {
     color: var(--text-light);
     font-size: 16px;
+    line-height: 1.25;
 
     @include tablet {
         width: 420px;
@@ -302,6 +303,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .advantages-increase-heading{
@@ -311,8 +313,11 @@
     letter-spacing: 0.02em;
     color: var(--text-color);
 
+    max-width: 200px;
+    
     @include tablet {
         font-size: 28px;
+        max-width: none;
     }
 }
 
@@ -349,7 +354,7 @@
     position: relative;
     gap: 16px;
     border: 1px solid #f1d476;
-    width: 260px;
+    width: 100%;
     color: var(--text-color);
     background-color: transparent;
     margin-top: 24px;
@@ -357,22 +362,27 @@
     
         @include tablet {
             margin-top: 32px;
+            width: 260px;
         }
 
 }
 
 
 .advantage-btn-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    opacity: 1;
-    z-index: -2;
-    background: var(--gold-gradient);
-    transition: opacity var(--timing-function);
+    display: none;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        opacity: 1;
+        z-index: -2;
+        background: var(--gold-gradient);
+        transition: opacity var(--timing-function);
+    }
     
 }
 
