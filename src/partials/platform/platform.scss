@@ -31,13 +31,21 @@
 }
 
 .platform-title{
+    text-align: center;
+
+    @include tablet {
+        text-align: start;
+    }
+}
+
+.platform-accent{
     display: block;
     font-size: 26px;
     line-height: 1.2;
-    margin-top: 10px;
 
     @include tablet {
         font-size: 52px;
+        margin-top: 10px;
     }
 }
 
@@ -58,13 +66,9 @@
     align-items: center;
     gap: 8px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.4;
     color: var(--white);
-
-    @include tablet {
-        font-size: 20px;
-    }
 }
 
 .platform-second-wrap {

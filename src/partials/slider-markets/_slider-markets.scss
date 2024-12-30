@@ -1,72 +1,14 @@
-.slider-markets-wrap{
-    display: flex;
-    margin-top: 32px;
-}
-
-
 .slider-markets-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: transparent;
+    padding: 32px 0;
+}
+
+.slider-markets-slides {
     display: flex;
-    animation: marquee 20s linear infinite;
-}
-
-
-.markets-slide-img-wrap {
-    display: flex;
-    align-items: center;
-}
-
-.markets-slide-text {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.markets-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 16px;
-    padding: 24px;
-    width: 272px;
-    height: 140px;
-    background: #121818;
-}
-
-.slide-gold{
-    background: var(--orange-gradient);
-}
-
-.markets-slide-text-wrap{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #7e580b;
-}
-
-.markets-slide-img-wrap{
-    display: flex;
-}
-
-.markets-slide-text{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.markets-slide-price{
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 1.4;
+    gap: 16px;
     color: var(--white);
+    animation: slide-animation 20s linear infinite;
 }
