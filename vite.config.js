@@ -9,8 +9,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: [
-        ...glob.sync('./src/*.html'), // Усі HTML з кореневої папки
-        ...glob.sync('./src/tr/*.html'), // Усі HTML з папки solutions
+        ...glob.sync('./src/*.html'), 
+        ...glob.sync('./src/tr/*.html'),
       ],
     },
     outDir: '../dist',

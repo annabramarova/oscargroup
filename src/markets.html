@@ -112,6 +112,9 @@
     <link rel="stylesheet" href="./styles.scss" />
   </head>
   <body>
+    <div id="loader" class="loader">
+      <span class="preloader"></span>
+    </div>
       <load ="partials/header/header-market.html" />
       <main>
       <load ="partials/markets-hero/markets-hero.html" />
@@ -121,6 +124,6 @@
       </main>
     <load ="partials/footer/footer.html" />
 
-    <script type="module" src="/markets.js"></script>
+    <script type="module" src="/markets.js" defer></script>
   </body>
 </html>

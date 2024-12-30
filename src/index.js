@@ -1,3 +1,4 @@
+import './partials/loader/loader';
 import './js/aos'; 
 import './js/animated-numbers';
 import './partials/advantages/chart';
