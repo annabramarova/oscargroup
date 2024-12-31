@@ -25,13 +25,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100%;
 }
 
 .contacts-title-wrap{
-    @include laptop {
-        max-width: 1000px;
-    }
+    text-align: center;
 }

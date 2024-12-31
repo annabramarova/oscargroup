@@ -1,0 +1,57 @@
+<section class="contacts-form" id="contacts-form">
+    <div class="container">
+        <div class="contacts-form-wrapper">
+            <div class="form-text-wrapper">
+                 <img
+                    class="form-img"
+                    src="/img/logo.svg"
+                    alt="oscar"
+                    width="331"
+                    height="146"
+                    />
+                <h2 class="title"><span data-i18n="form.title1">İletişim </span><span class="accent-text" data-i18n="form.title2">bize</span></h2>
+                <p class="text form-text" data-i18n="form.text1">Destek ekibimiz, herhangi bir konuda bizimle iletişime geçebilmeniz için 7/24 hizmet vermektedir. Size yardımcı olmaya ve başarınız için pratik tavsiyeler vermeye hazırız.</p>
+            </div>
+             <form class="contact-form js-contacts-page-form" autocomplete="off">
+               <div class="contact-field-wrapper">
+                    <label class="form-label" for="name" data-i18n="form.name">Tam Ad</label>
+                    <input
+                        class="field-styles"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="adınızı girin"
+                        required
+                        maxlength="50"
+                        data-bouncer-pattern="name"
+                    />
+                </div>
+                    <div class="contact-field-wrapper">
+                        <label class="form-label" for="phone" data-i18n="form.phone">Telefon numarası</label>
+                        <input
+                            class="field-styles input-small"
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="telefon girin"
+                            required
+                            maxlength="10"
+                            data-bouncer-pattern="phone"
+                            autocomplete="off"
+                            autocorrect="off"
+                        />
+                    </div>
+                <div class="contact-form-btn-wrapper">
+                   <p class="contact-form-text" data-i18n="form.text2">“Bize ulaşın” butonuna tıklayarak kişisel verilerinizin işlenmesini kabul etmiş oluyorsunuz. Verilerinizi üçüncü şahıslara aktarmıyoruz.</p>
+                <button
+                    type="submit"
+                    class="btn contact-form-btn"
+                    aria-label="open contact modal"
+                >
+                    <span class="btn-text" data-i18n="form.btn">Bize ulaşın</span>
+                </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
