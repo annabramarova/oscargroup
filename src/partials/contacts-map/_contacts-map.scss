@@ -1,22 +1,48 @@
-.contacts-map{
-    background-image: url('/img/contacts/map.avif');
-        background-color: #050505;
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 100%;
-        aspect-ratio: 1276 / 687;
-    
-        @include laptop {
-            background-image: url('/img/contacts/map.avif');
-            background-position: bottom center;
-            height: 738px;
-        }
-}
-
-.contacts-map-container{
+.contacts-map-container {
     position: relative;
     padding: 24px;
-    background-color: #050505;
+    background-color: var(--card-bg);
+    overflow: hidden;
 
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -150%; 
+        width: 200%; 
+        height: 100%;
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.2) 50%, 
+                rgba(255, 255, 255, 0) 100%);
+        opacity: 0.5; 
+        pointer-events: none;
+        animation: shimmer 5s infinite ease-in-out; 
+    }
+}
+
+.contacts-map {
+    background-image: url('/img/contacts/map.avif');
+    background-color: var(--card-bg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    aspect-ratio: 1276 / 687;
+
+    @include laptop {
+        background-image: url('/img/contacts/map.avif');
+        background-position: bottom center;
+        height: 738px;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%); 
+    }
+
+    100% {
+        transform: translateX(100%); 
+    }
 }
