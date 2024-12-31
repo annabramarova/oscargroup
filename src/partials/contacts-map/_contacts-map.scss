@@ -1,0 +1,22 @@
+.contacts-map{
+    background-image: url('/img/contacts/map.avif');
+        background-color: #050505;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        aspect-ratio: 1276 / 687;
+    
+        @include laptop {
+            background-image: url('/img/contacts/map.avif');
+            background-position: bottom center;
+            height: 738px;
+        }
+}
+
+.contacts-map-container{
+    position: relative;
+    padding: 24px;
+    background-color: #050505;
+
+}

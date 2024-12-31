@@ -1,8 +1,8 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.querySelector('.js-contact-form');
+  const contactForm = document.querySelector('.js-contacts-page-form');
 
-  if (!contactForm) return; 
+  if (!contactForm) return;
 
   contactForm.addEventListener('bouncerFormValid', async event => {
     event.preventDefault();
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formData = new FormData(contactForm);
     formData.append('formId', 'ContactForm');
 
-    await sendData(formData, contactForm); 
+    await sendData(formData, contactForm);
   });
 });
 
@@ -28,7 +28,6 @@ async function sendData(formData, contactForm) {
     });
 
     contactForm.reset();
-
   } catch (error) {
     console.error('Error:', error);
 
@@ -36,6 +35,5 @@ async function sendData(formData, contactForm) {
       timeout: 3000,
       showOnlyTheLastOne: true,
     });
-
   }
 }

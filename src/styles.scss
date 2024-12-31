@@ -10,14 +10,6 @@
 @import './partials/header/header';
 @import './partials/hero/hero';
 
-@import './partials/markets-hero/markets-hero';
-@import './partials/markets/markets';
-@import './partials/markets-table/markets-table';
-@import './partials/slider-markets/slider-markets';
-
-@import './partials/tariffs-hero/tariffs-hero';
-@import './partials/tariffs-advantages//tariffs-advantages';
-
 @import './partials/advantages/advantages';
 @import './partials/choice/choice';
 @import './partials/platform/platform';
@@ -27,5 +19,17 @@
 @import './partials/form/form';
 @import './partials/faq/faq';
 @import './partials/header/mobileMenu/menu';
+
+@import './partials/markets-hero/markets-hero';
+@import './partials/markets/markets';
+@import './partials/markets-table/markets-table';
+@import './partials/slider-markets/slider-markets';
+
+@import './partials/tariffs-hero/tariffs-hero';
+@import './partials/tariffs-advantages//tariffs-advantages';
+
+@import './partials/contacts-hero/contacts-hero';
+@import './partials/contacts-map/contacts-map';
+@import './partials/contacts-form/contacts-form';
 
 @import './partials/footer/footer';

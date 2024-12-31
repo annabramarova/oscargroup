@@ -1,0 +1,24 @@
+.contacts-form-wrapper{
+    display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 32px;
+        border: 1px solid #C3884D;
+        padding: 24px 16px;
+        box-shadow: -2px 18px 18px 0 rgba(95, 67, 24, 0.05);
+        background-color: var(--white);
+    
+        @include tablet {
+            gap: 32px;
+            padding: 32px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        @include laptop {
+            margin-left: 64px;
+            margin-right: 64px;
+            padding: 40px;
+            height: 450px;
+        }
+}
