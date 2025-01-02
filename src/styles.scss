@@ -2,23 +2,16 @@
 @import './styles/reset';
 @import './styles/global';
 @import './styles/reset';
+@import './styles/buttons';
 
 @import './partials/loader/loader';
-
-@import './styles/buttons';
 
 @import './partials/header/header';
 @import './partials/hero/hero';
 
-@import './partials/advantages/advantages';
-@import './partials/choice/choice';
-@import './partials/platform/platform';
-@import './partials/benefits/benefits';
-@import './partials/steps/steps';
-@import './partials/accounts/accounts';
-@import './partials/form/form';
-@import './partials/faq/faq';
-@import './partials/header/mobileMenu/menu';
+@import './partials/about-hero/about-hero';
+@import './partials/about-info/about-info';
+@import './partials/about-activity/about-activity';
 
 @import './partials/markets-hero/markets-hero';
 @import './partials/markets/markets';
@@ -32,5 +25,15 @@
 @import './partials/contacts-cards/contacts-cards';
 @import './partials/contacts-map/contacts-map';
 @import './partials/contacts-form/contacts-form';
+
+@import './partials/advantages/advantages';
+@import './partials/choice/choice';
+@import './partials/platform/platform';
+@import './partials/benefits/benefits';
+@import './partials/steps/steps';
+@import './partials/accounts/accounts';
+@import './partials/form/form';
+@import './partials/faq/faq';
+@import './partials/header/mobileMenu/menu';
 
 @import './partials/footer/footer';

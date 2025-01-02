@@ -139,13 +139,36 @@
      }
 }
 
-.btn-arrow {
-  display: none;
+.btn-icon {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
 
-  @include tablet {
+.btn-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    opacity: 1;
+  background: var(--gold-gradient);
+    transition: opacity var(--timing-function);
+}
+
+.btn-arrow {
     display: block;
      position: absolute;
-    right: 83px;
-    z-index: 0;
-  }
+     width: 9px;
+     height: 8px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+      opacity: 1;
+      z-index: 1;
 }

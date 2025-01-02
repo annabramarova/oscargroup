@@ -146,7 +146,8 @@
     width: 100%;
 
     @include laptop {
-        width: 410px;}
+        width: 410px;
+    }
 }
 
 .choices-card-text{
