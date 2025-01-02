@@ -1,5 +1,5 @@
 import './js/aos'; 
-import './js/animated-numbers';
+import './partials/advantages/animated-numbers';
 import './partials/advantages/chart';
 import './partials/advantages/dynamicCrypto';
 

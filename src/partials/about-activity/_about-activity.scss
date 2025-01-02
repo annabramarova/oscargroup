@@ -1,5 +1,6 @@
 .regulated-activity-section{
-    padding-top: 0;
+    padding-top: 40px;
+    padding-bottom: 80px;
 
     @include laptop{
         padding-bottom: 150px;
@@ -13,12 +14,6 @@
     @include laptop {
         flex-direction: row;
         justify-content: space-between;
-    }
-}
-
-.regulated-activity-header{
-    @include laptop{
-        max-width: 406px;
     }
 }
 
@@ -60,6 +55,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 16px;
+    gap: 16px;
 
     @include tablet{
         flex-direction: row;
@@ -70,7 +66,6 @@
     @include laptop {
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 16px;
         margin-top: 0;
     }
 }
@@ -142,6 +137,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 8px;
 
     @include tablet {
         flex-direction: row;
