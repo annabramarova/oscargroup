@@ -169,3 +169,23 @@ h2 {
   font-size: 10px;
   letter-spacing: 1px;
 }
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-animation-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
