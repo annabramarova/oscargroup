@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
-  const showOnScroll = 200; // Пиксели прокрутки для появления кнопки
+  const showOnScroll = 200; 
 
   const toggleVisibility = () => {
     if (window.scrollY > showOnScroll) {
@@ -13,13 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Плавная прокрутка
+      behavior: 'smooth', 
     });
   };
 
-  // Слушатель прокрутки для отображения/скрытия кнопки
   window.addEventListener('scroll', toggleVisibility);
 
-  // Слушатель клика по кнопке
   scrollToTopBtn.addEventListener('click', scrollToTop);
 });
