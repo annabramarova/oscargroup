@@ -1,5 +1,6 @@
 import './js/aos';
-import './partials/advantages/dynamicCrypto';
+import './partials/pages/home/advantages/dynamicCrypto';
 import './js/languageSwitcher';
+import './js/scrollToTop';
 
 import './partials/header/mobileMenu/mobileMenu';

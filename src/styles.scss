@@ -7,34 +7,34 @@
 @import './partials/loader/loader';
 
 @import './partials/header/header';
-@import './partials/hero/hero';
 
-@import './partials/about-hero/about-hero';
-@import './partials/about-brands/about-brands';
-@import './partials/about-info/about-info';
-@import './partials/about-activity/about-activity';
+@import './partials/pages/about-us/about-hero/about-hero';
+@import './partials/pages/about-us/about-brands/about-brands';
+@import './partials/pages/about-us/about-info/about-info';
+@import './partials/pages/about-us/about-activity/about-activity';
 
-@import './partials/markets-hero/markets-hero';
-@import './partials/markets/markets';
-@import './partials/markets-table/markets-table';
-@import './partials/slider-markets/slider-markets';
+@import './partials/pages/markets/markets-hero/markets-hero';
+@import './partials/pages/markets/markets/markets';
+@import './partials/pages/markets/markets-table/markets-table';
+@import './partials/pages/markets/slider-markets/slider-markets';
 
-@import './partials/tariffs-hero/tariffs-hero';
-@import './partials/tariffs-advantages//tariffs-advantages';
+@import './partials/pages/tariffs/tariffs-hero/tariffs-hero';
+@import './partials/pages/tariffs/tariffs-advantages//tariffs-advantages';
 
-@import './partials/contacts-hero/contacts-hero';
-@import './partials/contacts-cards/contacts-cards';
-@import './partials/contacts-map/contacts-map';
-@import './partials/contacts-form/contacts-form';
+@import './partials/pages/contact-us/contacts-hero/contacts-hero';
+@import './partials/pages/contact-us/contacts-cards/contacts-cards';
+@import './partials/pages/contact-us/contacts-map/contacts-map';
+@import './partials/pages/contact-us/contacts-form/contacts-form';
 
-@import './partials/advantages/advantages';
-@import './partials/choice/choice';
-@import './partials/platform/platform';
-@import './partials/benefits/benefits';
-@import './partials/steps/steps';
-@import './partials/accounts/accounts';
-@import './partials/form/form';
-@import './partials/faq/faq';
+@import './partials/pages/home/hero/hero';
+@import './partials/pages/home/advantages/advantages';
+@import './partials/pages/home/choice/choice';
+@import './partials/pages/home/platform/platform';
+@import './partials/pages/home/benefits/benefits';
+@import './partials/pages/home/steps/steps';
+@import './partials/pages/home/accounts/accounts';
+@import './partials/pages/home/form/form';
+@import './partials/pages/home/faq/faq';
 @import './partials/header/mobileMenu/menu';
 
 @import './partials/footer/footer';

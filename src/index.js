@@ -1,12 +1,13 @@
-import './js/aos'; 
-import './partials/advantages/animated-numbers';
-import './partials/advantages/chart';
-import './partials/advantages/dynamicCrypto';
+import './js/aos';
+import './partials/pages/home/advantages/animated-numbers';
+import './partials/pages/home/advantages/chart';
+import './partials/pages/home/advantages/dynamicCrypto';
 
 import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
+import './js/scrollToTop';
 
-import './partials/header/mobileMenu/mobileMenu'; 
-import './partials/faq/faq'; 
-import './partials/form/form'; 
+import './partials/header/mobileMenu/mobileMenu';
+import './partials/pages/home/faq/faq';
+import './partials/pages/home/form/form';
 import './js/validation/contactFormValidation';
