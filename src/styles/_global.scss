@@ -170,19 +170,29 @@ h2 {
   letter-spacing: 1px;
 }
 
-@keyframes slide-animation {
+@keyframes advantage-slide-animation {
   0% {
-    transform: translateX(-20%);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(-55%);
   }
 }
 
 @keyframes slide-animation-reverse {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 
   100% {

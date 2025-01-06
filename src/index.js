@@ -8,6 +8,7 @@ import './js/languageSwitcher';
 import './js/scrollToTop';
 
 import './partials/header/mobileMenu/mobileMenu';
+import './partials/header/mobileMenu/activePage';
 import './partials/pages/home/faq/faq';
 import './partials/pages/home/form/form';
 import './js/validation/contactFormValidation';

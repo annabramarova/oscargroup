@@ -12,9 +12,17 @@
 
 .brands-slider1 {
     display: flex;
-    gap: 16px;
-    animation: slide-animation 30s linear infinite;
+    animation: slide-animation 20s linear infinite;
+    will-change: transform;
+    width: max-content;
 }
+    
+.brands-slider1::after {
+        content: '';
+        display: flex;
+        width: max-content;
+        animation: none;
+    }
 
 .brands-slider-wrapper2 {
     position: relative;
@@ -24,9 +32,10 @@
 
 .brands-slider2 {
     display: flex;
-    gap: 32px;
-    animation: slide-animation-reverse 30s linear infinite;
+    animation: slide-animation-reverse 20s linear infinite;
     margin-top: 16px;
+    will-change: transform;
+    width: max-content;
 
     @include tablet{
         margin-top: 24px;
@@ -37,11 +46,20 @@
     }
 }
 
+.brands-slider2::after {
+    content: '';
+    display: flex;
+    width: max-content;
+    animation: none;
+}
+
 .brands-card{
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    margin-right: 16px;
     border-radius: 6px;
     padding: 9px 6px;
     width: 96px;

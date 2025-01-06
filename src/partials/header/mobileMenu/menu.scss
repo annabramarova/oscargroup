@@ -48,7 +48,8 @@
 }
 
 .menu-list {
-    padding: 100px 20px 0;
+    padding-top: 80px;
+    padding-right: 5%;
 
     @include laptop{
         padding: 0;

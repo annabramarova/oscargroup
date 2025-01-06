@@ -7,7 +7,15 @@
 
 .slider-markets-slides {
     display: flex;
-    gap: 16px;
     color: var(--white);
     animation: slide-animation 20s linear infinite;
+    will-change: transform;
+    width: max-content;
+}
+
+.slider-markets-slides::after {
+    content: '';
+    display: flex;
+    width: max-content;
+    animation: none;
 }

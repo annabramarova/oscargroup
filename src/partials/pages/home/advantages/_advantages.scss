@@ -365,9 +365,7 @@
             margin-top: 32px;
             width: 260px;
         }
-
 }
-
 
 .advantage-signup-chart{
     position: relative;
@@ -385,12 +383,18 @@
 
 .advantage-signup-slides{
     display: flex;
-    gap: 24px;
     color: var(--white);
-    animation: slide-animation 20s linear infinite;
-
+    animation: advantage-slide-animation 20s linear infinite;
+    will-change: transform;
+    width: max-content;
 }
 
+.advantage-signup-slides::after {
+    content: '';
+    display: flex;
+    width: max-content;
+    animation: none;
+}
 
 .advantage-signup-title{
     display: block;
@@ -402,9 +406,10 @@
 }
 
 .advantage-signup-slide {
-    display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 16px;
     border-radius: 16px;
     padding: 24px;
     min-width: 250px;
