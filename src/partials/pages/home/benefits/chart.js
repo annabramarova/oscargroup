@@ -6,7 +6,7 @@ window.addEventListener('scroll', function () {
 
   if (windowWidth <= 768) {
     diagram.style.height =
-      rect.top <= windowHeight && rect.bottom >= 0 ? '60px' : '0';
+      rect.top <= windowHeight && rect.bottom >= 0 ? '45%' : '0';
   } else {
     diagram.style.height =
       rect.top <= windowHeight && rect.bottom >= 0 ? '200px' : '0';
