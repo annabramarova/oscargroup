@@ -1,17 +1,25 @@
-const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+  const showOnScroll = 200; // Пиксели прокрутки для появления кнопки
 
-window.addEventListener('scroll', () => {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    scrollToTopBtn.classList.add('show');
-  } else {
-    scrollToTopBtn.classList.remove('show');
-  }
-});
+  const toggleVisibility = () => {
+    if (window.scrollY > showOnScroll) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  };
 
-scrollToTopBtn.addEventListener('click', () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Плавная прокрутка
+    });
+  };
+
+  // Слушатель прокрутки для отображения/скрытия кнопки
+  window.addEventListener('scroll', toggleVisibility);
+
+  // Слушатель клика по кнопке
+  scrollToTopBtn.addEventListener('click', scrollToTop);
 });
