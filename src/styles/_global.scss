@@ -15,15 +15,11 @@
     @content;
   }
 }
-html, body {
-  overflow-x: hidden;
-}
 
 body {
   color: var(--text-color);
   background-color: var(--background);
 }
-
 
 section {
   padding: 40px 0;
@@ -41,6 +37,12 @@ html {
   scrollbar-width: thin; 
   scrollbar-color: var(--gold) var(--footer-background); 
 }
+
+ body {
+   width: 100%;
+   max-width: 100%;
+   overflow-x: hidden;
+ }
 
 ::-webkit-scrollbar {
   width: 2px; 

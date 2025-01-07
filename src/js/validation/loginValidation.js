@@ -8,14 +8,11 @@ const loginForm = document.querySelector('.js-login-form');
 const loginFormValidation = new Bouncer('.js-login-form', BouncerConfig);
 
 loginForm.addEventListener('submit', e => {
-  // Прекращаем отправку формы, чтобы сначала пройти валидацию
-  e.preventDefault();
-
-  // Запускаем валидацию с Bouncer
-  const isValid = loginFormValidation.validate();
-
-  // Если форма прошла валидацию, отправляем ее
-  if (isValid) {
-    loginForm.submit();
+  
+loginForm.addEventListener('submit', e => {
+  if (!loginFormValidation.validate()) {
+    e.preventDefault();
   }
+});
+
 });

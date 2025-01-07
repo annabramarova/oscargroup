@@ -28,38 +28,30 @@
                     </div>
                     <div class="auth-forms">
                         <!-- Login Form -->
-                        <form class="auth-form login-form js-login-form active" id="login-form">
+                        <form class="auth-form js-login-form active">
                             <div class="auth-form-field">
                                 <label for="email-login" class="auth-label">Email</label>
-                                <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required />
+                                <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required autocomplete="username"/>
                             </div>
                             <div class="auth-form-field">
                                 <label for="password-login" class="auth-label">Password</label>
-                                <input type="password" id="password-login" class="auth-input"  placeholder="Enter your password"  required />
+                                <input type="password" id="password-login" class="auth-input" placeholder="Enter your password" required required autocomplete="current-password"/>
                             </div>
-                        <div class="auth-actions">
-                            <a href="#" class="auth-link">Forgot your password?</a>
-                            <button type="submit" class="btn auth-button" id="login-submit">Login</button>
-                        </div>
-                        <div class="auth-social">
-                            <button class="signup-btn auth-social-button facebook">
-                                <img
-                                    src="/img/modal/facebook.svg"
-                                    height="15"
-                                    width="9"
-                                    alt="facebook"
-                                />
-                                Login with Facebook</button>
-                            <button class="signup-btn auth-social-button google">
-                                <img
-                                    src="/img/modal/google.svg"
-                                    height="18"
-                                    width="18"
-                                    alt="google"
-                                />
-                                Login with Google</button>
-                        </div>
-                        <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
+                            <div class="auth-actions">
+                                <a href="#" class="auth-link">Forgot your password?</a>
+                                <button type="submit" class="btn auth-button" name="login-submit" id="login-submit-btn">Login</button>
+                            </div>
+                            <div class="auth-social">
+                                <button class="auth-social-button facebook">
+                                    <img src="/img/modal/facebook.svg" height="15" width="9" alt="facebook" />
+                                    Login with Facebook
+                                </button>
+                                <button class="auth-social-button google">
+                                    <img src="/img/modal/google.svg" height="18" width="18" alt="google" />
+                                    Login with Google
+                                </button>
+                            </div>
+                        <p class="auth-footer">I am a new user. <a href="#" class="auth-footer-link"  data-tab="registration">Sign Up</a></p>
                         </form>
 
                         <!-- Registration Form -->
@@ -81,17 +73,17 @@
                             </div>
                              <div class="auth-form-field">
                                 <label for="email-register" class="auth-label">Email</label>
-                                <input type="text" id="email-register" class="auth-input" placeholder="Enter your email address" required />
+                                <input type="text" id="email-register" class="auth-input" placeholder="Enter your email address" required autocomplete="username"/>
                             </div>
                         </div>
                         <div class="auth-input-group">
                              <div class="auth-form-field">
                                 <label for="password-register" class="auth-label">Password</label>
-                                <input type="password" id="password-register"  placeholder="Enter your password" class="auth-input" required />
+                                <input type="password" id="password-register"  placeholder="Enter your password" class="auth-input" required autocomplete="new-password"/>
                             </div>
                              <div class="auth-form-field">
                                 <label for="confirm-register" class="auth-label">Password confirmation</label>
-                                <input type="password" id="confirm-register" class="auth-input" placeholder="Password confirmation" required />
+                                <input type="password" id="confirm-register" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password"/>
                             </div>
                         </div>
                         <div class="auth-form-field">
@@ -110,7 +102,7 @@
                         </div>
                         <button type="submit" class="btn auth-button" id="registration-submit">Registration</button>
                         <div class="auth-social">
-                            <button class="signup-btn auth-social-button facebook">
+                            <button class="auth-social-button facebook">
                                 <img
                                     src="/img/modal/facebook.svg"
                                     height="15"
@@ -118,7 +110,7 @@
                                     alt="facebook"
                                 />
                                 Continue with Facebook</button>
-                            <button class="signup-btn auth-social-button google">
+                            <button class="auth-social-button google">
                                 <img
                                     src="/img/modal/google.svg"
                                     height="18"
@@ -127,7 +119,7 @@
                                 />
                                 Continue with Google</button>
                         </div>
-                        <p class="auth-footer">I am a new user. <a href="#" class="auth-footer-link"  data-tab="registration">Sign Up</a></p>
+                        <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
                         </form>
                     </div>
                 </div>
