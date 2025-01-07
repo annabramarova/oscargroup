@@ -8,6 +8,7 @@ import './partials/pages/home/advantages/dynamicCrypto';
 import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
 import './js/scrollToTop';
+import './partials/modal/authToggle';
 
 import './partials/header/mobileMenu/mobileMenu';
 import './partials/header/mobileMenu/activePage';

@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   height: 100svh;
   min-height: 500px;
+  
 
   @include tablet {
     background-image: url('/img/hero/hero.avif');
