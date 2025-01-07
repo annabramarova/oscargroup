@@ -1,11 +1,11 @@
 export default class numberRush {
   constructor(tagId, options) {
     this.tagId = tagId;
-    this.tagName = document.getElementById(tagId); // ищем элемент по ID
-    this.speed = options.speed || 20; // скорость
-    this.maxNumber = options.maxNumber || 100; // конечное число
-    this.steps = options.steps || 1; // шаг
-    this.scrollActiv = true; // активировать анимацию только один раз
+    this.tagName = document.getElementById(tagId); 
+    this.speed = options.speed || 20; 
+    this.maxNumber = options.maxNumber || 100; 
+    this.steps = options.steps || 1; 
+    this.scrollActiv = true; 
     this.init();
   }
 
@@ -34,11 +34,11 @@ export default class numberRush {
       if (currentNumber < this.maxNumber) {
         currentNumber += this.steps;
         if (currentNumber > this.maxNumber) {
-          currentNumber = this.maxNumber; // защита от перепрыгивания
+          currentNumber = this.maxNumber; 
         }
-        this.tagName.textContent = currentNumber; // обновляем текст
+        this.tagName.textContent = currentNumber; 
       } else {
-        clearInterval(interval); // останавливаем анимацию
+        clearInterval(interval); 
       }
     }, this.speed);
   }

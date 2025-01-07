@@ -1,4 +1,5 @@
 import './js/aos';
+import './js/micromodal';
 import './partials/pages/home/advantages/animated-numbers';
 import './partials/pages/home/advantages/chart';
 import './partials/pages/home/benefits/chart';

@@ -7,7 +7,7 @@ const symbols = [
   { name: 'Ethereum', symbol: 'ethusdt' },
 ];
 
-const updateInterval = 5000;
+const updateInterval = 1000;
 
 symbols.forEach((crypto, index) => {
   const socket = new WebSocket(

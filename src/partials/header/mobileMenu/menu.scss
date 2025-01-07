@@ -21,6 +21,7 @@
     transition: all 0.5s ease;
 }
 
+
 .menu.menu-bg {
     opacity: 1;
 
@@ -48,8 +49,7 @@
 }
 
 .menu-list {
-    padding-top: 80px;
-    padding-right: 5%;
+    padding-top: 120px;
 
     @include laptop{
         padding: 0;
