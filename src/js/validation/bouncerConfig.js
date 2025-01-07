@@ -53,6 +53,4 @@ export const BouncerConfig = {
     },
   },
 
-  // Disable submit
-  disableSubmit: true,
 };

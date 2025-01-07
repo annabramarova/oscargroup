@@ -28,7 +28,7 @@
                     </div>
                     <div class="auth-forms">
                         <!-- Login Form -->
-                        <form class="auth-form login-form active" id="login-form">
+                        <form class="auth-form login-form js-login-form active" id="login-form">
                             <div class="auth-form-field">
                                 <label for="email-login" class="auth-label">Email</label>
                                 <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required />
@@ -39,7 +39,7 @@
                             </div>
                         <div class="auth-actions">
                             <a href="#" class="auth-link">Forgot your password?</a>
-                            <button type="submit" class="btn auth-button">Login</button>
+                            <button type="submit" class="btn auth-button" id="login-submit">Login</button>
                         </div>
                         <div class="auth-social">
                             <button class="signup-btn auth-social-button facebook">
@@ -59,11 +59,11 @@
                                 />
                                 Login with Google</button>
                         </div>
-                        <p class="auth-footer">Already have an account? <a href="#" class="auth-footer-link">Login</a></p>
+                        <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
                         </form>
 
                         <!-- Registration Form -->
-                        <form class="auth-form registration-form" id="registration-form">
+                        <form class="auth-form registration-form js-registration-form" id="registration-form">
                         <div class="auth-input-group">
                             <div class="auth-form-field">
                                 <label for="name-register" class="auth-label">Name</label>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="auth-form-field">
                                 <label for="promo-register" class="auth-label">Promocode</label>
-                                <input type="text" id="promo-register" class="auth-input" placeholder="Enter your promocode" required />
+                                <input type="text" id="promo-register" class="auth-input" placeholder="Enter your promocode" />
                             </div>
                         <div class="auth-checkboxes">
                             <label>
@@ -108,7 +108,7 @@
                                 <a href="/files/refund_policy.pdf" target="_blank" rel="noopener noreferrer">Refund Policy</a>
                             </label>
                         </div>
-                        <button type="submit" class="btn auth-button">Registration</button>
+                        <button type="submit" class="btn auth-button" id="registration-submit">Registration</button>
                         <div class="auth-social">
                             <button class="signup-btn auth-social-button facebook">
                                 <img
@@ -127,7 +127,7 @@
                                 />
                                 Continue with Google</button>
                         </div>
-                        <p class="auth-footer">I am a new user. <a href="#" class="auth-footer-link">Sign Up</a></p>
+                        <p class="auth-footer">I am a new user. <a href="#" class="auth-footer-link"  data-tab="registration">Sign Up</a></p>
                         </form>
                     </div>
                 </div>

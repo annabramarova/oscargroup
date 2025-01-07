@@ -14,4 +14,6 @@ import './partials/header/mobileMenu/mobileMenu';
 import './partials/header/mobileMenu/activePage';
 import './partials/pages/home/faq/faq';
 import './partials/pages/home/form/form';
+import './js/validation/loginValidation';
+import './js/validation/registrationValidation';
 import './js/validation/contactFormValidation';
