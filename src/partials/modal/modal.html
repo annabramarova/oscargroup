@@ -35,12 +35,12 @@
                             </div>
                             <div class="auth-form-field">
                                 <label for="password-login" class="auth-label">Password</label>
-                                <input type="password" id="password-login" class="auth-input" placeholder="Enter your password" required required autocomplete="current-password"/>
+                                <input type="password" id="password-login"  maxlength="16" class="auth-input" placeholder="Enter your password" required autocomplete="current-password" minlength="8"/>
                             </div>
                             <div class="auth-actions">
-                                <a href="#" class="auth-link">Forgot your password?</a>
-                                <button type="submit" class="btn auth-button" name="login-submit" id="login-submit-btn">Login</button>
-                            </div>
+                                <a href="#" class="auth-link">Forgot your password?</a> 
+                                <button type="submit" class="btn auth-button" id="login-submit">Login</button>
+                            </div> 
                             <div class="auth-social">
                                 <button class="auth-social-button facebook">
                                     <img src="/img/modal/facebook.svg" height="15" width="9" alt="facebook" />
@@ -69,7 +69,7 @@
                         <div class="auth-input-group">
                             <div class="auth-form-field">
                                 <label for="phone-register" class="auth-label">Phone number</label>
-                                <input type="text" id="phone-register" class="auth-input" placeholder="Enter your phone number" required />
+                                <input type="text" id="phone-register" class="auth-input" placeholder="Enter your phone number" required maxlength="10" data-bouncer-pattern="phone"/>
                             </div>
                              <div class="auth-form-field">
                                 <label for="email-register" class="auth-label">Email</label>
@@ -79,11 +79,11 @@
                         <div class="auth-input-group">
                              <div class="auth-form-field">
                                 <label for="password-register" class="auth-label">Password</label>
-                                <input type="password" id="password-register"  placeholder="Enter your password" class="auth-input" required autocomplete="new-password"/>
+                                <input type="password" id="password-register" maxlength="16"  placeholder="Enter your password" class="auth-input" required autocomplete="new-password" minlength="8"/>
                             </div>
                              <div class="auth-form-field">
                                 <label for="confirm-register" class="auth-label">Password confirmation</label>
-                                <input type="password" id="confirm-register" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password"/>
+                                <input type="password" id="confirm-register" maxlength="16" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password" minlength="8"/>
                             </div>
                         </div>
                         <div class="auth-form-field">
