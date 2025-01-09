@@ -4,12 +4,18 @@ import { handleLoginSubmit } from '../fetch';
 
 const loginForm = document.querySelector('.js-login-form');
 
-new Bouncer('.js-login-form', BouncerConfig);
+loginForm.addEventListener('submit', e => {
+  e.preventDefault(); 
 
-loginForm.addEventListener('submit', async e => {
-  e.preventDefault();
-      const email = loginForm.querySelector('#email-login').value; 
-      const password = loginForm.querySelector('#password-login').value;  
+    const email = loginForm.querySelector('#email-login').value;
+    const password = loginForm.querySelector('#password-login').value;
 
-      await handleLoginSubmit(email, password);
+
+    handleLoginSubmit(email, password)
+      .then(response => {
+        console.log('Form submitted successfully:', response);
+      })
+      .catch(error => {
+        console.error('Error during form submission:', error);
+      });
 });

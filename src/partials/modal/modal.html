@@ -31,7 +31,7 @@
                         <form class="auth-form js-login-form active" id="js-login-form">
                             <div class="auth-form-field">
                                 <label for="email-login" class="auth-label">Email</label>
-                                <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required autocomplete="username"/>
+                                <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required data-bouncer-target="#email-error" autocomplete="username"/>
                             </div>
                             <div class="auth-form-field password-input">
                                 <label for="password-login" class="auth-label">Password</label>
@@ -76,7 +76,7 @@
                             </div>
                              <div class="auth-form-field">
                                 <label for="email-register" class="auth-label">Email</label>
-                                <input type="text" id="email-register" class="auth-input" placeholder="Enter your email address" required autocomplete="username"/>
+                                <input type="text" id="email-register" class="auth-input" data-bouncer-target="#email-error" placeholder="Enter your email address" required autocomplete="username"/>
                             </div>
                         </div>
                         <div class="auth-input-group">

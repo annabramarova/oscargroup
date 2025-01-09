@@ -64,11 +64,25 @@ confirmPasswordInput.addEventListener('input', validatePasswords);
 
 // Handle form submission
 registrationForm.addEventListener('submit', e => {
+  let isFormValid = true;
+
+  // Phone number validation
+  if (!iti.isValidNumber()) {
+    isFormValid = false;
+    const error = iti.getValidationError();
+    phoneInput.setCustomValidity(
+      errorMessages[error] || 'Invalid phone number'
+    );
+  }
+
+  // Password confirmation validation
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    isFormValid = false;
+    confirmPasswordInput.setCustomValidity('Passwords do not match');
+  }
   
-  loginForm.addEventListener('bouncerFormValid', async () => {
-        const email = loginForm.querySelector('#email-login').value; 
-        const password = loginForm.querySelector('#password-login').value;  
-  
-        await handleLoginSubmit(email, password);
-      });
+  // Validate with Bouncer.js
+  if (!isFormValid || !registrationFormValidation.validate()) {
+    e.preventDefault();
+  }
 });
