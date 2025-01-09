@@ -1,16 +1,12 @@
 import Bouncer from 'formbouncerjs';
 import { BouncerConfig } from './bouncerConfig';
-import { handleLoginSubmit } from '../ajax';
+import { handleLoginSubmit } from '../fetch';
 
-// Отримуємо форму
 const loginForm = document.querySelector('.js-login-form');
+new Bouncer('.js-login-form', BouncerConfig);
 
-const loginFormValidation = new Bouncer('.js-login-form', BouncerConfig);
-
-loginForm.addEventListener('submit', e => {
-  if (!loginFormValidation.validate()) {
-    e.preventDefault();
-  } else {
-    handleLoginSubmit(e);
-  }
+loginForm.addEventListener('bouncerFormValid', async e => {
+  e.preventDefault(); 
+  
+  await handleLoginSubmit(e); 
 });
