@@ -40,7 +40,6 @@ export const BouncerConfig = {
 };
 
 
-
 export function initBouncer(formElement) {
   return new Bouncer(formElement, BouncerConfig);
 }

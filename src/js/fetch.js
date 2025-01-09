@@ -1,10 +1,9 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const url = "oscargroup.live"
 
 export async function handleLoginSubmit(email, password) {
   try {
-    const response = await fetch(`https://api.${url}/login`, {
+    const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -19,9 +18,9 @@ export async function handleLoginSubmit(email, password) {
 
     if (resp.success) {
       Notify.success('Login successful! Redirecting...');
-      window.location.href = resp.autologin; // Переход по ссылке
+      window.location.href = resp.autologin;
     } else {
-      Notify.failure(resp.message);
+      Notify.failure(resp.message); 
     }
   } catch (error) {
     Notify.failure(

@@ -9,6 +9,8 @@ const registrationFormValidation = new Bouncer(
   BouncerConfig
 );
 const phoneInput = document.querySelector('#phone-register');
+const passwordInput = document.querySelector('#password-register');
+const confirmPasswordInput = document.querySelector('#confirm-register');
 const iti = intlTelInput(phoneInput, {
   initialCountry: 'tr',
   separateDialCode: true,
@@ -30,6 +32,7 @@ const errorMessages = {
   4: 'Invalid number format',
 };
 
+// Restrict digits in name inputs
 const nameInput = document.querySelector('#name-register');
 const lastNameInput = document.querySelector('#last-name-register');
 
@@ -39,6 +42,7 @@ const lastNameInput = document.querySelector('#last-name-register');
   });
 });
 
+// Validate phone input
 phoneInput.addEventListener('input', () => {
   phoneInput.value = phoneInput.value.replace(/\D/g, '');
   if (iti.isValidNumber()) {
@@ -46,18 +50,25 @@ phoneInput.addEventListener('input', () => {
   }
 });
 
+// Validate password match
+const validatePasswords = () => {
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    confirmPasswordInput.setCustomValidity('Passwords do not match');
+  } else {
+    confirmPasswordInput.setCustomValidity('');
+  }
+};
+
+passwordInput.addEventListener('input', validatePasswords);
+confirmPasswordInput.addEventListener('input', validatePasswords);
+
+// Handle form submission
 registrationForm.addEventListener('submit', e => {
-  let isFormValid = true;
-
-  if (!iti.isValidNumber()) {
-    isFormValid = false;
-    const error = iti.getValidationError();
-    phoneInput.setCustomValidity(
-      errorMessages[error] || 'Invalid phone number'
-    );
-  }
-
-  if (!isFormValid || !registrationFormValidation.validate()) {
-    e.preventDefault();
-  }
+  
+  loginForm.addEventListener('bouncerFormValid', async () => {
+        const email = loginForm.querySelector('#email-login').value; 
+        const password = loginForm.querySelector('#password-login').value;  
+  
+        await handleLoginSubmit(email, password);
+      });
 });

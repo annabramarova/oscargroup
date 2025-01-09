@@ -4,7 +4,7 @@ import { handleLoginSubmit } from '../fetch';
 
 const loginForm = document.querySelector('.js-login-form');
 
-const bouncer = new Bouncer('.js-login-form', BouncerConfig);
+new Bouncer('.js-login-form', BouncerConfig);
 
 loginForm.addEventListener('submit', async e => {
   e.preventDefault();
