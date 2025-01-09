@@ -435,3 +435,33 @@
         }
     }
 }
+
+.toggle-password{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 32px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+
+    opacity: 0.5;
+        transition: opacity var(--timing-function);
+    
+        @media (hover: hover) and (pointer: fine) {
+    
+            &:hover,
+            &:focus {
+                opacity: 0.8;
+            }
+        }
+}
+
+.fa-eye, .fa-eye-slash{
+    color: var(--text-light);
+    
+}
+
+.password-input{
+    position: relative;
+}

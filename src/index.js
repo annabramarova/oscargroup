@@ -9,6 +9,7 @@ import './js/validation/bouncerConfig';
 import './js/languageSwitcher';
 import './js/scrollToTop';
 import './partials/modal/authToggle';
+import './partials/modal/togglePassword';
 
 import './partials/header/mobileMenu/mobileMenu';
 import './partials/header/mobileMenu/activePage';
