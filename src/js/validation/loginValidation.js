@@ -8,11 +8,8 @@ new Bouncer('.js-login-form', BouncerConfig);
 
 loginForm.addEventListener('submit', async e => {
   e.preventDefault();
-
-    loginForm.addEventListener('bouncerFormValid', async () => {
       const email = loginForm.querySelector('#email-login').value; 
       const password = loginForm.querySelector('#password-login').value;  
 
       await handleLoginSubmit(email, password);
-    });
 });
