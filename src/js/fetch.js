@@ -25,7 +25,6 @@ export async function handleLoginSubmit(event) {
     }
 
     const resp = await response.json();
-    console.log('Server Response:', response);
     if (resp.success) {
       Notify.success('Login successful! Redirecting...');
       window.location.href = resp.autologin;
