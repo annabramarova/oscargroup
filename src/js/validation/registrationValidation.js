@@ -33,13 +33,15 @@ const errorMessages = {
 };
 
 // Restrict digits in name inputs
-const nameInput = document.querySelector('#name-register');
-const lastNameInput = document.querySelector('#last-name-register');
+const nameInput = document.querySelector('#fname-register');
+const lastNameInput = document.querySelector('#sname-register');
 
 [nameInput, lastNameInput].forEach(input => {
-  input.addEventListener('input', () => {
-    input.value = input.value.replace(/\d/g, '');
-  });
+  if (input) {
+    input.addEventListener('input', () => {
+      input.value = input.value.replace(/\d/g, '');
+    });
+  }
 });
 
 // Validate phone input
@@ -80,7 +82,7 @@ registrationForm.addEventListener('submit', e => {
     isFormValid = false;
     confirmPasswordInput.setCustomValidity('Passwords do not match');
   }
-  
+
   // Validate with Bouncer.js
   if (!isFormValid || !registrationFormValidation.validate()) {
     e.preventDefault();

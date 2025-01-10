@@ -1,21 +1,26 @@
 import Bouncer from 'formbouncerjs';
 import { BouncerConfig } from './bouncerConfig';
 import { handleLoginSubmit } from '../fetch';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const loginForm = document.querySelector('.js-login-form');
 
-loginForm.addEventListener('submit', e => {
+new Bouncer('.js-login-form', BouncerConfig);
+
+loginForm.addEventListener('submit', async e => {
   e.preventDefault(); 
 
-    const email = loginForm.querySelector('#email-login').value;
-    const password = loginForm.querySelector('#password-login').value;
+  const isValid = loginForm.checkValidity();
+  if (isValid) {
+    const email = loginForm.querySelector('#email-login').value; 
+    const password = loginForm.querySelector('#password-login').value;  
 
-
-    handleLoginSubmit(email, password)
-      .then(response => {
-        console.log('Form submitted successfully:', response);
-      })
-      .catch(error => {
-        console.error('Error during form submission:', error);
-      });
+    try {
+      await handleLoginSubmit(email, password);
+    } catch (error) {
+      Notify.failure(
+      'An error occurred while trying to log in. Please try again later.'
+    );
+    }
+  } 
 });

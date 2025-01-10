@@ -59,94 +59,74 @@
 
                         <!-- Registration Form -->
                         <form class="auth-form registration-form js-registration-form" id="registration-form">
-                        <div class="auth-input-group">
+                            <div class="auth-input-group">
+                                <div class="auth-form-field">
+                                    <label for="fname-register" class="auth-label">Name</label>
+                                    <input type="text" id="fname-register" name="fname" class="auth-input" placeholder="Enter your name" required />
+                                </div>
+                                <div class="auth-form-field">
+                                    <label for="sname-register" class="auth-label">Last Name</label>
+                                    <input type="text" id="sname-register" name="sname" class="auth-input" placeholder="Enter your last name" required />
+                                </div>
+                            </div>
+                            <div class="auth-input-group">
+                                <div class="auth-form-field">
+                                    <label for="phone-register" class="auth-label">Phone number</label>
+                                    <input type="text" id="phone-register" name="phone" class="auth-input" placeholder="Enter your phone number" required maxlength="10" data-bouncer-pattern="phone" />
+                                </div>
+                                <div class="auth-form-field">
+                                    <label for="email-register" class="auth-label">Email</label>
+                                    <input type="email" id="email-register" name="email" class="auth-input" placeholder="Enter your email address" required autocomplete="username" />
+                                </div>
+                            </div>
+                            <div class="auth-input-group">
+                                <div class="auth-form-field password-input">
+                                    <label for="password-register" class="auth-label">Password</label>
+                                    <input type="password" id="password-register" name="password" maxlength="16" placeholder="Enter your password" class="auth-input" required autocomplete="new-password" minlength="8" />
+                                    <button type="button" class="toggle-password" aria-label="Show/Hide password">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                                <div class="auth-form-field password-input">
+                                    <label for="confirm-register" class="auth-label">Password confirmation</label>
+                                    <input type="password" id="confirm-register" name="confirm-password" maxlength="16" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password" minlength="8" />
+                                    <button type="button" class="toggle-password" aria-label="Show/Hide password">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <div class="auth-form-field">
-                                <label for="name-register" class="auth-label">Name</label>
-                                <input type="text" id="name-register" class="auth-input" placeholder="Enter your name" required />
-                            </div>
-                             <div class="auth-form-field">
-                                <label for="last-name-register" class="auth-label">Last Name</label>
-                                <input type="text" id="last-name-register" class="auth-input" placeholder="Enter your last name" required />
-                            </div>
-                        </div>
-                        <div class="auth-input-group">
-                            <div class="auth-form-field">
-                                <label for="phone-register" class="auth-label">Phone number</label>
-                                <input type="text" id="phone-register" class="auth-input" placeholder="Enter your phone number" required maxlength="10" data-bouncer-pattern="phone"/>
-                            </div>
-                             <div class="auth-form-field">
-                                <label for="email-register" class="auth-label">Email</label>
-                                <input type="text" id="email-register" class="auth-input" data-bouncer-target="#email-error" placeholder="Enter your email address" required autocomplete="username"/>
-                            </div>
-                        </div>
-                        <div class="auth-input-group">
-                             <div class="auth-form-field password-input">
-                                <label for="password-register" class="auth-label">Password</label>
-                                <input type="password" id="password-register" maxlength="16"  placeholder="Enter your password" class="auth-input" required autocomplete="new-password" minlength="8"/>
-                                <button type="button" class="toggle-password" aria-label="Show/Hide password">
-                                    <i class="fas fa-eye-slash"></i>
-                                </button>
-                            </div>
-                             <div class="auth-form-field password-input">
-                                <label for="confirm-register" class="auth-label">Password confirmation</label>
-                                <input type="password" id="confirm-register" maxlength="16" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password" minlength="8"/>
-                                <button type="button" class="toggle-password" aria-label="Show/Hide password">
-                                    <i class="fas fa-eye-slash"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="auth-form-field">
                                 <label for="promo-register" class="auth-label">Promocode</label>
-                                <input type="text" id="promo-register" class="auth-input" placeholder="Enter your promocode" />
+                                <input type="text" id="promo-register" name="promocode" class="auth-input" placeholder="Enter your promocode" />
                             </div>
-                        <div class="auth-checkboxes">
-                            <label for="checkbox-user">
-                                <input type="checkbox" id="checkbox-user" required class="custom-checkbox"/>
-                                <span class="custom-checkbox-icon">
-                                <img
-                                    class="custom-checkbox-icon-svg"
-                                    src="/img/modal/arrow.svg"
-                                    alt="close-icon"
-                                    width="11"
-                                    height="11"
-                                />
-                                </span>
-                                <a href="/files/user_agreement.pdf" target="_blank" rel="noopener noreferrer">User Agreement</a>
-                            </label>
-                            <label for="checkbox-privacy">
-                                <input type="checkbox" id="checkbox-privacy" required class="custom-checkbox"/>
-                                <span class="custom-checkbox-icon">
-                                <img
-                                    class="custom-checkbox-icon-svg"
-                                    src="/img/modal/arrow.svg"
-                                    alt="close-icon"
-                                    width="11"
-                                    height="11"
-                                />
-                                </span>
-                                <a href="/files/refund_policy.pdf" target="_blank" rel="noopener noreferrer">Refund Policy</a>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn auth-button" id="registration-submit">Registration</button>
-                        <div class="auth-social">
-                            <button class="auth-social-button facebook">
-                                <img
-                                    src="/img/modal/facebook.svg"
-                                    height="15"
-                                    width="9"
-                                    alt="facebook"
-                                />
-                                Continue with Facebook</button>
-                            <button class="auth-social-button google">
-                                <img
-                                    src="/img/modal/google.svg"
-                                    height="18"
-                                    width="18"
-                                    alt="google"
-                                />
-                                Continue with Google</button>
-                        </div>
-                        <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
+                            <div class="auth-checkboxes">
+                                <label for="checkbox-user">
+                                    <input type="checkbox" id="checkbox-user" required class="custom-checkbox" />
+                                    <span class="custom-checkbox-icon">
+                                        <img class="custom-checkbox-icon-svg" src="/img/modal/arrow.svg" alt="close-icon" width="11" height="11" />
+                                    </span>
+                                    <a href="/files/user_agreement.pdf" target="_blank" rel="noopener noreferrer">User Agreement</a>
+                                </label>
+                                <label for="checkbox-privacy">
+                                    <input type="checkbox" id="checkbox-privacy" required class="custom-checkbox" />
+                                    <span class="custom-checkbox-icon">
+                                        <img class="custom-checkbox-icon-svg" src="/img/modal/arrow.svg" alt="close-icon" width="11" height="11" />
+                                    </span>
+                                    <a href="/files/refund_policy.pdf" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn auth-button" id="registration-submit">Registration</button>
+                            <div class="auth-social">
+                                <button class="auth-social-button facebook">
+                                    <img src="/img/modal/facebook.svg" height="15" width="9" alt="facebook" />
+                                    Continue with Facebook
+                                </button>
+                                <button class="auth-social-button google">
+                                    <img src="/img/modal/google.svg" height="18" width="18" alt="google" />
+                                    Continue with Google
+                                </button>
+                            </div>
+                            <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
                         </form>
                     </div>
                 </div>

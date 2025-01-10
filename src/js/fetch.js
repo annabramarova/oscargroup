@@ -1,9 +1,10 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+const url = 'oskargroup.live';
 
 export async function handleLoginSubmit(email, password) {
   try {
-    const response = await fetch('https://api.oskargroup.live/login', {
+    const response = await fetch(`https://api.${url}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
