@@ -4149,6 +4149,15 @@ svg {
   }
 }
 
+.footer-link {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer-link {
+    font-size: 18px;
+  }
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
