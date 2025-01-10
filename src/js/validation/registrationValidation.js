@@ -1,90 +1,104 @@
 import Bouncer from 'formbouncerjs';
 import { BouncerConfig } from './bouncerConfig';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/css/intlTelInput.css';
+import { handleRegistration } from '../fetch';
 
-const registrationForm = document.querySelector('.js-registration-form');
-const registrationFormValidation = new Bouncer(
-  '.js-registration-form',
-  BouncerConfig
-);
+// Initialize intl-tel-input for phone validation
 const phoneInput = document.querySelector('#phone-register');
-const passwordInput = document.querySelector('#password-register');
-const confirmPasswordInput = document.querySelector('#confirm-register');
+
 const iti = intlTelInput(phoneInput, {
   initialCountry: 'tr',
   separateDialCode: true,
-  geoIpLookup: callback => {
+  useFullscreenPopup: false,
+  geoIpLookup: function (callback) {
     fetch('https://ipapi.co/json')
-      .then(res => res.json())
-      .then(data => callback(data.country_code))
-      .catch(() => callback('us'));
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        callback(data.country_code);
+      })
+      .catch(function () {
+        callback('us');
+      });
   },
   utilsScript:
     'https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js',
 });
 
-const errorMessages = {
-  0: 'Invalid phone number',
-  1: 'Invalid country code',
-  2: 'Too short',
-  3: 'Too long',
-  4: 'Invalid number format',
-};
+// Form selector
+const registrationForm = document.querySelector('.js-registration-form');
 
-// Restrict digits in name inputs
-const nameInput = document.querySelector('#fname-register');
-const lastNameInput = document.querySelector('#sname-register');
-
-[nameInput, lastNameInput].forEach(input => {
-  if (input) {
-    input.addEventListener('input', () => {
-      input.value = input.value.replace(/\d/g, '');
-    });
-  }
-});
-
-// Validate phone input
-phoneInput.addEventListener('input', () => {
-  phoneInput.value = phoneInput.value.replace(/\D/g, '');
-  if (iti.isValidNumber()) {
-    phoneInput.setCustomValidity('');
-  }
-});
-
-// Validate password match
-const validatePasswords = () => {
-  if (passwordInput.value !== confirmPasswordInput.value) {
-    confirmPasswordInput.setCustomValidity('Passwords do not match');
-  } else {
-    confirmPasswordInput.setCustomValidity('');
-  }
-};
-
-passwordInput.addEventListener('input', validatePasswords);
-confirmPasswordInput.addEventListener('input', validatePasswords);
+// Initialize Bouncer for form validation
+new Bouncer('.js-registration-form', BouncerConfig);
 
 // Handle form submission
-registrationForm.addEventListener('submit', e => {
-  let isFormValid = true;
+registrationForm.addEventListener('submit', async e => {
+  e.preventDefault();
 
-  // Phone number validation
-  if (!iti.isValidNumber()) {
-    isFormValid = false;
-    const error = iti.getValidationError();
-    phoneInput.setCustomValidity(
-      errorMessages[error] || 'Invalid phone number'
-    );
+  // Remove any existing error messages
+  const errorMessages = registrationForm.querySelectorAll('.error-message');
+  errorMessages.forEach(message => message.remove());
+
+  // Check general form validity with Bouncer
+  const isValid = registrationForm.checkValidity();
+
+  // Check phone validation
+  const phoneIsValid = iti.isValidNumber(); // Add phone validation here
+
+  // Password match check
+  const password = registrationForm.querySelector('#password-register').value;
+  const confirmPassword =
+    registrationForm.querySelector('#confirm-register').value;
+
+  if (password !== confirmPassword) {
+    const confirmPasswordInput =
+      registrationForm.querySelector('#confirm-register');
+    const errorElement = document.createElement('p');
+    errorElement.classList.add('error-message');
+    errorElement.textContent = 'Passwords do not match';
+    confirmPasswordInput.parentElement.appendChild(errorElement);
+    return;
   }
 
-  // Password confirmation validation
-  if (passwordInput.value !== confirmPasswordInput.value) {
-    isFormValid = false;
-    confirmPasswordInput.setCustomValidity('Passwords do not match');
-  }
+  if (isValid && phoneIsValid) {
+    const formData = new FormData(registrationForm);
+    const registrationData = Object.fromEntries(formData.entries());
 
-  // Validate with Bouncer.js
-  if (!isFormValid || !registrationFormValidation.validate()) {
-    e.preventDefault();
+    try {
+      await handleRegistration(registrationData);
+      Notify.success('Registration successful!');
+      registrationForm.reset();
+      iti.setCountry('tr');
+    } catch (error) {
+      Notify.failure(
+        'An error occurred during registration. Please try again.'
+      );
+    }
+  } else {
+    Notify.failure('Please fill out all required fields correctly.');
   }
+});
+
+
+// Restrict input for name and last name (no digits allowed)
+const fnameInput = document.querySelector('#fname-register');
+const snameInput = document.querySelector('#sname-register');
+
+function removeDigits(event) {
+  event.target.value = event.target.value.replace(/\d/g, ''); // Replace digits with an empty string
+}
+
+fnameInput.addEventListener('input', removeDigits);
+snameInput.addEventListener('input', removeDigits);
+
+// Restrict input for phone (only digits allowed)
+const phoneInputField = document.querySelector('#phone-register');
+
+phoneInputField.addEventListener('input', function (event) {
+  const currentValue = event.target.value;
+  // Allow only digits for phone number input
+  event.target.value = currentValue.replace(/\D/g, ''); // Replace non-digit characters with an empty string
 });

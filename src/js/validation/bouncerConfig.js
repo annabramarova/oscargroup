@@ -4,13 +4,13 @@ export const BouncerConfig = {
   fieldClass: 'error', // Applied to fields with errors
   errorClass: 'error-message', // Applied to the error message for invalid fields
   fieldPrefix: 'bouncer-field_', // If a field doesn't have a name or ID, one is generated with this prefix
-  errorPrefix: 'bouncer-error_', // Prefix used for error message IDs
+  errorPrefix: 'bouncer-error_',
   validateOnBlur: true,
   validateOnSubmit: true,
   customMessages: {
     required: 'This field is required',
     email: 'Please enter a valid email address',
-    minLength: 'Password must be at least 8 characters long',
+    minLength: 'Phone number must be at least 8 characters long',
   },
 
   patterns: {
@@ -20,6 +20,7 @@ export const BouncerConfig = {
 
   // Message Settings
   messageAfterField: true, // If true, displays error message below field. If false, displays it above.
+  messageCustom: 'data-bouncer-message',
 
   messages: {
     missingValue: {

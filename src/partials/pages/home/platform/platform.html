@@ -46,14 +46,17 @@
             <div class="platform-second-wrap">
                 <p class="text platform-text" data-i18n="platform.text">Oskar Group is an award-winning platform that allows you to trade the world's financial markets. With a wide range of trading instruments, including forex, commodities, indices and cryptocurrencies, Oskar Group creates an optimal environment for successful trading in any market conditions. Our platform provides fast transaction execution, reliable data protection and transparent trading conditions.</p>
                 <div class="platform-btn-wrap">
-                 <a
+                 <button
                     type="button"
                     class="btn platform-btn"
-                    data-i18n="tryPlat"
+                    aria-label="open contact modal"
+                    data-micromodal-trigger="my-modal"
                     >
                     Try our platform
-                    </a>
-                 <a href="" class="signup-btn platform-btn-2" data-i18n="signup">Sign up
+                    </button>
+                 <button class="signup-btn platform-btn-2" 
+                    aria-label="open contact modal"
+                    data-micromodal-trigger="my-modal">Sign up
                      <div class="btn-icon">
                         <div class="btn-bg"></div>
                         <img
@@ -62,7 +65,7 @@
                         alt="arrow"
                         />
                     </div>  
-                </a>
+                </button>
             </div>
         </div>
     </div>

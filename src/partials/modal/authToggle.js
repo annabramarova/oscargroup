@@ -38,3 +38,10 @@ document.querySelectorAll('.auth-tab').forEach(tab => {
     toggleActiveTab(this);
   });
 });
+
+document
+  .querySelector('.js-forgot-password-link')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    toggleActiveTab({ dataset: { tab: 'reset-password' } });
+  });

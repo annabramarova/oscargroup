@@ -1,4 +1,4 @@
-<div class="modal micromodal-slide" id="my-modal">
+<div class="modal micromodal-slide" id="my-modal-tr">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true">
             <div class="modal__content">
@@ -22,82 +22,82 @@
                                 />
                         </div>
                         <div class="auth-tabs">
-                            <button class="auth-tab active" data-tab="login">Login</button>
-                            <button class="auth-tab" data-tab="registration">Registration</button>
+                            <button class="auth-tab active" data-tab="login">Giriş Yap</button>
+                            <button class="auth-tab" data-tab="registration">Kayıt Ol</button>
                         </div>
                     </div>
                     <div class="auth-forms">
                         <!-- Login Form -->
                         <form class="auth-form js-login-form active" id="js-login-form">
                             <div class="auth-form-field">
-                                <label for="email-login" class="auth-label">Email</label>
+                                <label for="email-login" class="auth-label">E-posta</label>
                                 <input type="email" id="email-login" class="auth-input" placeholder="Enter your email address" required data-bouncer-target="#email-error" autocomplete="username"/>
                             </div>
                             <div class="auth-form-field password-input">
-                                <label for="password-login" class="auth-label">Password</label>
+                                <label for="password-login" class="auth-label">Şifre</label>
                                 <input type="password" id="password-login"  maxlength="16" class="auth-input" placeholder="Enter your password" required autocomplete="current-password" minlength="8"/>
                                 <button type="button" class="toggle-password toggle-password-login" aria-label="Show/Hide password">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </div>
                             <div class="auth-actions">
-                                <a href="#" class="auth-link js-forgot-password-link">Forgot your password?</a> 
-                                <button type="submit" class="btn auth-button" id="login-submit">Login</button>
+                                <a href="#" class="auth-link js-forgot-password-link">Şifrenizi mi unuttunuz?</a> 
+                                <button type="submit" class="btn auth-button" id="login-submit">Giriş Yap</button>
                             </div> 
                             <div class="auth-social">
                                 <button class="auth-social-button facebook">
                                     <img src="/img/modal/facebook.svg" height="15" width="9" alt="facebook" />
-                                    Login with Facebook
+                                    Facebook ile Giriş Yap
                                 </button>
                                 <button class="auth-social-button google">
                                     <img src="/img/modal/google.svg" height="18" width="18" alt="google" />
-                                    Login with Google
+                                    Google ile Giriş Yap
                                 </button>
                             </div>
-                        <p class="auth-footer">I am a new user. <a href="#" class="auth-footer-link"  data-tab="registration">Sign Up</a></p>
+                        <p class="auth-footer">Ben yeni bir kullanıcıyım. <a href="#" class="auth-footer-link"  data-tab="registration">Kayıt Ol</a></p>
                         </form>
 
                         <!-- Password recovery -->
                         <form class="auth-form js-reset-password-form" id="js-reset-password-form">
                             <div class="auth-form-field">
-                                <label for="email-reset" class="auth-label">Email</label>
+                                <label for="email-reset" class="auth-label">E-posta</label>
                                 <input type="email" id="email-reset" class="auth-input" placeholder="Enter your email address" required data-bouncer-target="#email-error" autocomplete="username"/>
                             </div>
-                                <button type="submit" class="btn auth-button" id="reset-submit">Reset password</button>
+                                <button type="submit" class="btn auth-button" id="reset-submit">Şifreyi Sıfırla</button>
                         </form>
 
                         <!-- Registration Form -->
                         <form class="auth-form registration-form js-registration-form" id="registration-form">
                             <div class="auth-input-group">
                                 <div class="auth-form-field">
-                                    <label for="fname-register" class="auth-label">Name</label>
+                                    <label for="fname-register" class="auth-label">İsim</label>
                                     <input type="text" id="fname-register" name="fname" class="auth-input" placeholder="Enter your name" required maxlength="16"/>
                                 </div>
                                 <div class="auth-form-field">
-                                    <label for="sname-register" class="auth-label">Last Name</label>
+                                    <label for="sname-register" class="auth-label">Soyisim</label>
                                     <input type="text" id="sname-register" name="sname" class="auth-input" placeholder="Enter your last name" required maxlength="16"/>
                                 </div>
                             </div>
                             <div class="auth-input-group">
                                 <div class="auth-form-field">
-                                    <label for="phone-register" class="auth-label">Phone number</label>
+                                    <label for="phone-register" class="auth-label">Telefon numarası</label>
                                     <input type="text" id="phone-register" name="phone" class="auth-input" data-bouncer-message placeholder="Enter your phone number" required maxlength="10"/>
                                 </div>
                                 <div class="auth-form-field">
-                                    <label for="email-register" class="auth-label">Email</label>
+                                    <label for="email-register" class="auth-label">E-posta</label>
                                     <input type="email" id="email-register" name="email" class="auth-input" placeholder="Enter your email address" required autocomplete="username" maxlength="20" />
                                 </div>
                             </div>
                             <div class="auth-input-group">
                                 <div class="auth-form-field password-input">
-                                    <label for="password-register" class="auth-label">Password</label>
+                                    <label for="password-register" class="auth-label">Şifre</label>
                                     <input type="password" id="password-register" name="password" maxlength="16" placeholder="Enter your password" class="auth-input" required autocomplete="new-password" />
                                     <button type="button" class="toggle-password toggle-password-register" aria-label="Show/Hide password">
                                         <i class="fas fa-eye-slash"></i>
                                     </button>
                                 </div>
                                 <div class="auth-form-field password-input">
-                                    <label for="confirm-register" class="auth-label">Password confirmation</label>
+                                    <label for="confirm-register" class="auth-label">Şifre onayı</label>
                                     <input type="password" id="confirm-register" name="confirm-password" maxlength="16" class="auth-input" placeholder="Password confirmation" required autocomplete="new-password" />
                                     <button type="button" class="toggle-password toggle-password-confirm" aria-label="Show/Hide password">
                                         <i class="fas fa-eye-slash"></i>
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="auth-form-field">
-                                <label for="promo-register" class="auth-label">Promocode</label>
+                                <label for="promo-register" class="auth-label">Promosyon Kodu</label>
                                 <input type="text" id="promo-register" name="promocode" class="auth-input" placeholder="Enter your promocode" />
                             </div>
                             <div class="auth-checkboxes">
@@ -114,28 +114,28 @@
                                     <span class="custom-checkbox-icon">
                                         <img class="custom-checkbox-icon-svg" src="/img/modal/arrow.svg" alt="close-icon" width="11" height="11" />
                                     </span>
-                                    <a href="/files/user_agreement.pdf" target="_blank" rel="noopener noreferrer">User Agreement</a>
+                                    <a href="/files/user_agreement.pdf" target="_blank" rel="noopener noreferrer">Kullanıcı Sözleşmesi</a>
                                 </label>
                                 <label for="checkbox-privacy">
                                     <input type="checkbox" id="checkbox-privacy" required class="custom-checkbox" />
                                     <span class="custom-checkbox-icon">
                                         <img class="custom-checkbox-icon-svg" src="/img/modal/arrow.svg" alt="close-icon" width="11" height="11" />
                                     </span>
-                                    <a href="/files/refund_policy.pdf" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+                                    <a href="/files/refund_policy.pdf" target="_blank" rel="noopener noreferrer">İade Politikası</a>
                                 </label>
                             </div>
-                            <button type="submit" class="btn auth-button" id="registration-submit">Registration</button>
+                            <button type="submit" class="btn auth-button" id="registration-submit">Kayıt Olma</button>
                             <div class="auth-social">
                                 <button class="auth-social-button facebook">
                                     <img src="/img/modal/facebook.svg" height="15" width="9" alt="facebook" />
-                                    Continue with Facebook
+                                    Facebook ile Devam Et
                                 </button>
                                 <button class="auth-social-button google">
                                     <img src="/img/modal/google.svg" height="18" width="18" alt="google" />
-                                    Continue with Google
+                                    Google ile Devam Et
                                 </button>
                             </div>
-                            <p class="auth-footer">Already have an account? <a href="#" data-tab="login" class="auth-footer-link">Login</a></p>
+                            <p class="auth-footer">Zaten bir hesabınız var mı? <a href="#" data-tab="login" class="auth-footer-link">Giriş Yap</a></p>
                         </form>
                     </div>
                 </div>
