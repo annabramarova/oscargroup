@@ -11,7 +11,6 @@ import './partials/modal/togglePassword';
 import './partials/header/mobileMenu/mobileMenu';
 import './partials/header/mobileMenu/activePage';
 
-import './js/validation/contactsPageValidation';
 import './js/validation/loginValidation';
 import './js/validation/registrationValidation';
 import './js/validation/resetPasswordValidation';
