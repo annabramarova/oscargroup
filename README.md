@@ -1,37 +1,60 @@
-Install the packages with `npm install`
+# Oscar Group Project
 
-Build command is `npm run build` and the publish directory is `dist`
+## Overview
+This repository contains the codebase for the **Oscar Group** project, a digital platform designed for [insert project purpose, e.g., "streamlining business processes" or "providing customer management solutions"]. It leverages modern web technologies to deliver a seamless and responsive user experience.
 
-To start developing, use `npm start` and follow the link in the console,
-example: `http://localhost:5173/`
+## Installation
+Follow these steps to set up the project locally:
 
-# Partials
 
-_Used for convenience of development and splitting the html page into parts._
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Using a partial:
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-- Create an html document without `<!DOCTYPE>` and `<head>` parts and work as
-  with regular html.
-- Import your partial to the page you need, for example `index.html`
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-```jsx
-<body>
-  <load ="partials/header.html" />
-</body>
+4. **Preview the production build:**
+   ```bash
+   npm run preview
+   ```
+
+## File Structure
+```
+oscargroup/
+├── src/
+│   ├── components/    # Reusable components
+│   ├── css/           # SCSS/CSS styles
+│   ├── fonts/         # Custom fonts
+│   ├── js/            # JavaScript files
+│   ├── assets/        # Images and other assets
+│   └── index.html     # Main HTML file
+├── dist/              # Production build output
+├── vite.config.js     # Vite configuration
+├── package.json       # Project dependencies and scripts
+└── README.md          # Project documentation
 ```
 
-Save your images to a public folder.
+## Key Components
+- **Header:** Includes navigation and a logo.
+- **Hero Section:** Features a background image, slider, and a form.
+- **Slider:** Displays user reviews using Swiper.js.
+- **Footer:** Inspired by Skaiway's footer design.
 
-Import images in partials relative to the main html file regardless of where the
-partial itself is located HTML
+## Development Notes
+- SCSS is used for styling with variables and mixins for consistency.
+- Mobile-first design approach ensures responsiveness.
+- Uses **Micromodal** for modals and **intl-tel-input** for phone input validation.
 
-```html
-<img src="./img/logo.svg" alt="logo" />
-```
 
-```css
-.div {
-  background-image: url('/img/hero/hero-eclipse.png');
-}
-```
+---
+Thank you for exploring the Oscar Group project!
+
