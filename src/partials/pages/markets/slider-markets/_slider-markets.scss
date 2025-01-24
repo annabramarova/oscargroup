@@ -1,9 +1,9 @@
 .slider-markets-wrap {
     position: relative;
-    overflow: hidden;
     width: 100%;
     background: transparent;
     padding: 32px 0;
+    overflow: hidden;
 }
 
 .slider-markets-slides {
@@ -11,12 +11,10 @@
     color: var(--white);
     animation: slide-animation 25s linear infinite;
     will-change: transform;
-    width: max-content;
 }
 
 .slider-markets-slides::after {
     content: '';
     display: flex;
-    width: max-content;
     animation: none;
 }
