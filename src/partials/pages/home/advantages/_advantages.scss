@@ -384,7 +384,7 @@
 .advantage-signup-slides{
     display: flex;
     color: var(--white);
-    animation: advantage-slide-animation 25s linear infinite;
+    animation: advantage-slide-animation 35s linear infinite;
     will-change: transform;
     width: max-content;
 }
@@ -417,7 +417,7 @@
     background: #121818;
 }
 
-.slide-gold {
+.chainlink {
     background: var(--orange-gradient);
 }
 

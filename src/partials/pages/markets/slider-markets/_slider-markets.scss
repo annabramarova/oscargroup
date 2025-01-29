@@ -9,8 +9,8 @@
 .slider-markets-slides {
     display: flex;
     color: var(--white);
-    animation: slide-animation 25s linear infinite;
-    will-change: transform;
+    animation: slide-animation 45s linear infinite;
+    width: max-content;
 }
 
 .slider-markets-slides::after {

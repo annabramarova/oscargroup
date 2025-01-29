@@ -7,6 +7,40 @@ const symbols = [
   { name: 'Ethereum', symbol: 'ethusdt' },
 ];
 
+const sliderWrap = document.querySelector('.slider-markets-slides');
+
+// Умножаем массив на 4 для создания четырех экземпляров каждого символа
+const duplicatedSymbols = Array(4).fill(symbols).flat();
+
+function createSlides() {
+  sliderWrap.innerHTML = '';
+
+  duplicatedSymbols.forEach(crypto => {
+    const slide = document.createElement('div');
+    slide.classList.add('advantage-signup-slide');
+
+    let arrowImage = '/img/slider/arrow-down.svg';
+    if (crypto.symbol === 'linkusdt') {
+      slide.classList.add('chainlink');
+      arrowImage = '/img/slider/arrow-white.svg';
+    }
+
+    slide.innerHTML = `
+      <div class="advantage-crypto">
+        <span class="crypto-name">${crypto.name}</span>
+        <div class="crypto-change">
+          <span class="crypto-percent">-</span>
+          <img src="${arrowImage}" alt="icon" class="change-arrow" width="22" height="22">
+        </div>
+      </div>
+      <span class="crypto-value">-</span>
+    `;
+    sliderWrap.appendChild(slide);
+  });
+}
+
+createSlides();
+
 const socketUrls = symbols.map(crypto => `${crypto.symbol}@ticker`).join('/');
 
 const socket = new WebSocket(
@@ -34,7 +68,7 @@ socket.onmessage = event => {
 };
 
 function updateAllCryptoSlides() {
-  symbols.forEach((crypto, index) => {
+  duplicatedSymbols.forEach((crypto, index) => {
     const cryptoData = cryptoDataMap[crypto.symbol];
     if (cryptoData) {
       updateCryptoSlide(

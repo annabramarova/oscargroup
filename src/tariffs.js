@@ -1,7 +1,7 @@
 import './js/aos';
 import './js/micromodal';
 import './js/validation/bouncerConfig';
-import './partials/pages/home/advantages/dynamicCrypto';
+import './partials/pages/markets/slider-markets/dynamicCrypto';
 import './js/languageSwitcher';
 import './js/scrollToTop';
 

@@ -4,7 +4,7 @@ import './js/languageSwitcher';
 import './js/scrollToTop';
 import './partials/header/mobileMenu/activePage';
 
-import './partials/pages/home/advantages/dynamicCrypto';
+import './partials/pages/markets/slider-markets/dynamicCrypto';
 import './partials/pages/markets/markets-table/marketsDataFetch';
 
 import './partials/header/mobileMenu/mobileMenu';
