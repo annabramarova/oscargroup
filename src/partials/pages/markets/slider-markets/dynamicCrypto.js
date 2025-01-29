@@ -110,6 +110,6 @@ function updateWithAnimation(element, newValue) {
 
     setTimeout(() => {
       element.classList.remove('up', 'down');
-    }, 1000);
+    }, 3000);
   }
 }
