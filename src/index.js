@@ -4,7 +4,7 @@ import './js/validation/bouncerConfig';
 import './partials/pages/home/advantages/animated-numbers';
 import './partials/pages/home/advantages/chart';
 import './partials/pages/home/benefits/chart';
-import './partials/pages/home/advantages/dynamicCrypto';
+import './partials/pages/markets/slider-markets/dynamicCrypto';
 
 import './js/languageSwitcher';
 import './js/scrollToTop';

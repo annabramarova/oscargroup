@@ -9,7 +9,6 @@ const symbols = [
 
 const sliderWrap = document.querySelector('.slider-markets-slides');
 
-// Умножаем массив на 4 для создания четырех экземпляров каждого символа
 const duplicatedSymbols = Array(4).fill(symbols).flat();
 
 function createSlides() {
@@ -92,13 +91,24 @@ function updateCryptoSlide(selector, cryptoData) {
   if (slide) {
     const valueElement = slide.querySelector('.crypto-value');
     const percentElement = slide.querySelector('.crypto-percent');
+    const arrowElement = slide.querySelector('.change-arrow');
 
-    updateWithSyncAnimation(valueElement, percentElement, cryptoData);
+    updateWithSyncAnimation(
+      valueElement,
+      percentElement,
+      cryptoData,
+      arrowElement
+    );
   }
 }
 
-function updateWithSyncAnimation(valueElement, percentElement, cryptoData) {
-  if (!valueElement || !percentElement) return;
+function updateWithSyncAnimation(
+  valueElement,
+  percentElement,
+  cryptoData,
+  arrowElement
+) {
+  if (!valueElement || !percentElement || !arrowElement) return;
 
   const oldValue = parseFloat(valueElement.textContent.replace(/[$,%]/g, ''));
   const newPrice = parseFloat(cryptoData.price);
@@ -114,13 +124,14 @@ function updateWithSyncAnimation(valueElement, percentElement, cryptoData) {
 
     if (newChange > 0) {
       slide.classList.add('up');
+      arrowElement.style.transform = 'rotate(180deg)'; 
     } else if (newChange < 0) {
       slide.classList.add('down');
+      arrowElement.style.transform = 'rotate(0deg)'; 
     }
 
-    // Удаляем классы после завершения анимации
     setTimeout(() => {
       slide.classList.remove('up', 'down');
-    }, 3000);
+    }, 4000);
   }
 }

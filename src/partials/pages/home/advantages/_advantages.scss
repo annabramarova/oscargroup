@@ -384,7 +384,6 @@
 .advantage-signup-slides{
     display: flex;
     color: var(--white);
-    animation: advantage-slide-animation 35s linear infinite;
     will-change: transform;
     width: max-content;
 }
@@ -490,3 +489,4 @@
 .advantage-signup-slide.down .crypto-percent {
     color: red;
 }
+
