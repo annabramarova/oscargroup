@@ -185,19 +185,19 @@ h2 {
 
 @keyframes slide-animation {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes slide-animation-reverse {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-50%);
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0%);
   }
 }

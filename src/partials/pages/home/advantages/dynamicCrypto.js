@@ -66,16 +66,20 @@ function updateWithAnimation(element, newValue) {
   if (oldValue !== newNumericValue) {
     element.textContent = newValue;
 
-    element.classList.remove('up', 'down');
+    // Get the parent slide element
+    const slide = element.closest('.advantage-signup-slide');
+
+    // Remove the previous color classes
+    slide.classList.remove('up', 'down');
 
     if (newNumericValue > oldValue) {
-      element.classList.add('up');
+      slide.classList.add('up'); 
     } else if (newNumericValue < oldValue) {
-      element.classList.add('down');
+      slide.classList.add('down');
     }
 
     setTimeout(() => {
-      element.classList.remove('up', 'down');
-    }, 1000);
+      slide.classList.remove('up', 'down');
+    }, 2000);
   }
 }

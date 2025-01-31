@@ -476,14 +476,17 @@
     align-items: center;
 }
 
-.crypto-value, .crypto-percent {
+.crypto-value,
+.crypto-percent {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.crypto-value.up, .crypto-percent.up{
+.advantage-signup-slide.up .crypto-value,
+.advantage-signup-slide.up .crypto-percent {
     color: green;
 }
 
-.crypto-value.down, .crypto-percent.down {
+.advantage-signup-slide.down .crypto-value,
+.advantage-signup-slide.down .crypto-percent {
     color: red;
 }

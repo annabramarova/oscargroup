@@ -1,10 +1,10 @@
 const symbols = [
-  { name: 'Bitcoin', symbol: 'btcusdt' },
-  { name: 'Litecoin', symbol: 'ltcusdt' },
-  { name: 'Chainlink', symbol: 'linkusdt' },
-  { name: 'Binance Coin', symbol: 'bnbusdt' },
-  { name: 'Solana', symbol: 'solusdt' },
-  { name: 'Ethereum', symbol: 'ethusdt' },
+  { name: 'Bitcoin', symbol: 'btcusdt', initialValue: '$94,857.62' },
+  { name: 'Litecoin', symbol: 'ltcusdt', initialValue: '$131.92' },
+  { name: 'Chainlink', symbol: 'linkusdt', initialValue: '$24.90' },
+  { name: 'Binance Coin', symbol: 'bnbusdt', initialValue: '$652.78' },
+  { name: 'Solana', symbol: 'solusdt', initialValue: '$187.81' },
+  { name: 'Ethereum', symbol: 'ethusdt', initialValue: '$3,278.80' },
 ];
 
 const sliderWrap = document.querySelector('.slider-markets-slides');
@@ -29,11 +29,11 @@ function createSlides() {
       <div class="advantage-crypto">
         <span class="crypto-name">${crypto.name}</span>
         <div class="crypto-change">
-          <span class="crypto-percent">-</span>
+          <span class="crypto-percent">1,5%</span>
           <img src="${arrowImage}" alt="icon" class="change-arrow" width="22" height="22">
         </div>
       </div>
-      <span class="crypto-value">-</span>
+      <span class="crypto-value">${crypto.initialValue}</span>
     `;
     sliderWrap.appendChild(slide);
   });
@@ -48,6 +48,8 @@ const socket = new WebSocket(
 );
 
 const cryptoDataMap = {};
+
+let updateTimeout;
 
 socket.onmessage = event => {
   const messageData = JSON.parse(event.data);
@@ -64,7 +66,12 @@ socket.onmessage = event => {
     };
   }
 
-  updateAllCryptoSlides();
+  if (!updateTimeout) {
+    updateTimeout = setTimeout(() => {
+      updateAllCryptoSlides();
+      updateTimeout = null;
+    }, 500);
+  }
 };
 
 function updateAllCryptoSlides() {
@@ -84,32 +91,36 @@ function updateCryptoSlide(selector, cryptoData) {
 
   if (slide) {
     const valueElement = slide.querySelector('.crypto-value');
-    updateWithAnimation(valueElement, `$${cryptoData.price}`);
-
     const percentElement = slide.querySelector('.crypto-percent');
-    updateWithAnimation(percentElement, `${cryptoData.change}%`);
+
+    updateWithSyncAnimation(valueElement, percentElement, cryptoData);
   }
 }
 
-function updateWithAnimation(element, newValue) {
-  if (!element) return;
+function updateWithSyncAnimation(valueElement, percentElement, cryptoData) {
+  if (!valueElement || !percentElement) return;
 
-  const oldValue = parseFloat(element.textContent.replace(/[$,%]/g, ''));
-  const newNumericValue = parseFloat(newValue.replace(/[$,%]/g, ''));
+  const oldValue = parseFloat(valueElement.textContent.replace(/[$,%]/g, ''));
+  const newPrice = parseFloat(cryptoData.price);
+  const newChange = parseFloat(cryptoData.change);
 
-  if (oldValue !== newNumericValue) {
-    element.textContent = newValue;
+  if (isNaN(oldValue) || oldValue !== newPrice) {
+    valueElement.textContent = `$${cryptoData.price}`;
+    percentElement.textContent = `${cryptoData.change}%`;
 
-    element.classList.remove('up', 'down');
+    const slide = valueElement.closest('.advantage-signup-slide');
 
-    if (newNumericValue > oldValue) {
-      element.classList.add('up');
-    } else if (newNumericValue < oldValue) {
-      element.classList.add('down');
+    slide.classList.remove('up', 'down');
+
+    if (newChange > 0) {
+      slide.classList.add('up');
+    } else if (newChange < 0) {
+      slide.classList.add('down');
     }
 
+    // Удаляем классы после завершения анимации
     setTimeout(() => {
-      element.classList.remove('up', 'down');
+      slide.classList.remove('up', 'down');
     }, 3000);
   }
 }
