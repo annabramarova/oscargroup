@@ -8,7 +8,6 @@ const symbols = [
 ];
 
 const sliderWrap = document.querySelector('.slider-markets-slides');
-
 const duplicatedSymbols = Array(4).fill(symbols).flat();
 
 function createSlides() {
@@ -41,12 +40,12 @@ function createSlides() {
 createSlides();
 
 const socketUrls = symbols.map(crypto => `${crypto.symbol}@ticker`).join('/');
-
 const socket = new WebSocket(
   `wss://stream.binance.com:9443/stream?streams=${socketUrls}`
 );
 
 const cryptoDataMap = {};
+const lastUpdatedTimes = {};
 
 socket.onmessage = event => {
   const messageData = JSON.parse(event.data);
@@ -56,11 +55,14 @@ socket.onmessage = event => {
   const cryptoInfo = symbols.find(crypto => crypto.symbol === streamName);
 
   if (cryptoInfo) {
-    cryptoDataMap[cryptoInfo.symbol] = {
+    const newData = {
       name: cryptoInfo.name,
       price: parseFloat(data.c).toFixed(2),
       change: parseFloat(data.P).toFixed(2),
     };
+
+    // Сохраняем данные в map
+    cryptoDataMap[cryptoInfo.symbol] = newData;
   }
 
   scheduleIndividualUpdates();
@@ -72,10 +74,7 @@ function scheduleIndividualUpdates() {
     const crypto = duplicatedSymbols[index];
     const cryptoData = cryptoDataMap[crypto.symbol];
     if (cryptoData) {
-      updateCryptoSlide(
-        `.advantage-signup-slide:nth-child(${index + 1})`,
-        cryptoData
-      );
+      updateCryptoSlides(crypto.symbol, cryptoData);
     }
 
     index++;
@@ -86,21 +85,30 @@ function scheduleIndividualUpdates() {
   requestAnimationFrame(updateNext);
 }
 
-function updateCryptoSlide(selector, cryptoData) {
-  const slide = document.querySelector(selector);
+function updateCryptoSlides(symbol, cryptoData) {
+  // Обновляем все карточки для данного символа
+  const slides = document.querySelectorAll(`.advantage-signup-slide`);
+  slides.forEach(slide => {
+    const slideSymbol = slide
+      .querySelector('.crypto-name')
+      .textContent.toLowerCase();
+    if (slideSymbol === cryptoData.name.toLowerCase()) {
+      updateCryptoSlide(slide, cryptoData);
+    }
+  });
+}
 
-  if (slide) {
-    const valueElement = slide.querySelector('.crypto-value');
-    const percentElement = slide.querySelector('.crypto-percent');
-    const arrowElement = slide.querySelector('.change-arrow');
+function updateCryptoSlide(slide, cryptoData) {
+  const valueElement = slide.querySelector('.crypto-value');
+  const percentElement = slide.querySelector('.crypto-percent');
+  const arrowElement = slide.querySelector('.change-arrow');
 
-    updateWithSyncAnimation(
-      valueElement,
-      percentElement,
-      cryptoData,
-      arrowElement
-    );
-  }
+  updateWithSyncAnimation(
+    valueElement,
+    percentElement,
+    cryptoData,
+    arrowElement
+  );
 }
 
 function updateWithSyncAnimation(
@@ -115,12 +123,12 @@ function updateWithSyncAnimation(
   const newPrice = parseFloat(cryptoData.price);
   const newChange = parseFloat(cryptoData.change);
 
-  if (isNaN(oldValue) || oldValue !== newPrice) {
+  // Только обновляем, если цена действительно изменилась
+  if (oldValue !== newPrice) {
     valueElement.textContent = `$${cryptoData.price}`;
     percentElement.textContent = `${cryptoData.change}%`;
 
     const slide = valueElement.closest('.advantage-signup-slide');
-
     const isUp = newChange > 0;
     arrowElement.style.transform = isUp ? 'rotate(180deg)' : 'rotate(0deg)';
 
