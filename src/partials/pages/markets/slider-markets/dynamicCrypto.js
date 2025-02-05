@@ -121,7 +121,6 @@ function updateWithSyncAnimation(
 
     const slide = valueElement.closest('.advantage-signup-slide');
 
-    // Контроль анимации направления изменения цены
     const isUp = newChange > 0;
     arrowElement.style.transform = isUp ? 'rotate(180deg)' : 'rotate(0deg)';
 
@@ -137,5 +136,5 @@ function animateSlide(slide, isUp) {
 
   setTimeout(() => {
     slide.classList.remove('up', 'down');
-  }, 2000);
+  }, 1000);
 }
