@@ -28,7 +28,7 @@ function createSlides() {
       <div class="advantage-crypto">
         <span class="crypto-name">${crypto.name}</span>
         <div class="crypto-change">
-          <span class="crypto-percent">1,5%</span>
+          <span class="crypto-percent">1.5%</span>
           <img src="${arrowImage}" alt="icon" class="change-arrow" width="22" height="22">
         </div>
       </div>
@@ -48,8 +48,6 @@ const socket = new WebSocket(
 
 const cryptoDataMap = {};
 
-let updateTimeout;
-
 socket.onmessage = event => {
   const messageData = JSON.parse(event.data);
   const streamName = messageData.stream.split('@')[0];
@@ -65,16 +63,13 @@ socket.onmessage = event => {
     };
   }
 
-  if (!updateTimeout) {
-    updateTimeout = setTimeout(() => {
-      updateAllCryptoSlides();
-      updateTimeout = null;
-    }, 500);
-  }
+  scheduleIndividualUpdates();
 };
 
-function updateAllCryptoSlides() {
-  duplicatedSymbols.forEach((crypto, index) => {
+function scheduleIndividualUpdates() {
+  let index = 0;
+  const updateNext = () => {
+    const crypto = duplicatedSymbols[index];
     const cryptoData = cryptoDataMap[crypto.symbol];
     if (cryptoData) {
       updateCryptoSlide(
@@ -82,7 +77,13 @@ function updateAllCryptoSlides() {
         cryptoData
       );
     }
-  });
+
+    index++;
+    if (index < duplicatedSymbols.length) {
+      requestAnimationFrame(updateNext);
+    }
+  };
+  requestAnimationFrame(updateNext);
 }
 
 function updateCryptoSlide(selector, cryptoData) {
@@ -120,18 +121,21 @@ function updateWithSyncAnimation(
 
     const slide = valueElement.closest('.advantage-signup-slide');
 
-    slide.classList.remove('up', 'down');
+    // Контроль анимации направления изменения цены
+    const isUp = newChange > 0;
+    arrowElement.style.transform = isUp ? 'rotate(180deg)' : 'rotate(0deg)';
 
-    if (newChange > 0) {
-      slide.classList.add('up');
-      arrowElement.style.transform = 'rotate(180deg)'; 
-    } else if (newChange < 0) {
-      slide.classList.add('down');
-      arrowElement.style.transform = 'rotate(0deg)'; 
-    }
-
-    setTimeout(() => {
-      slide.classList.remove('up', 'down');
-    }, 4000);
+    animateSlide(slide, isUp);
   }
+}
+
+function animateSlide(slide, isUp) {
+  if (!slide) return;
+
+  slide.classList.remove('up', 'down');
+  slide.classList.add(isUp ? 'up' : 'down');
+
+  setTimeout(() => {
+    slide.classList.remove('up', 'down');
+  }, 2000);
 }
